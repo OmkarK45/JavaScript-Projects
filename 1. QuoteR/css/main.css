@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -65,5 +66,104 @@ ul > li {
   list-style: none;
   text-transform: uppercase;
   font-size: 1.6rem;
+}
+
+.quote-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  width: 50%;
+  min-height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+
+.quote-container .quote-text {
+  font-size: 4rem;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+}
+
+.quote-container .quote-text i {
+  font-size: 5rem;
+}
+
+.quote-container .quote-author {
+  font-size: 2rem;
+  margin: 2rem auto;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.7rem;
+}
+
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn-container button {
+  background-color: #f7f7f7;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 2.5rem;
+}
+
+.btn-container #twitter i {
+  color: #00acee;
+  margin-right: .5rem;
+  font-size: 2.5rem;
+}
+
+.btn-container #new-quote i {
+  margin-right: .5rem;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 968px) {
+  .quote-container {
+    width: 90%;
+  }
+  .quote-container .quote-text {
+    font-size: 3.5rem;
+    color: white;
+    font-family: 'Cabin', sans-serif;
+  }
+  .quote-container .quote-author {
+    font-size: 1.9rem;
+  }
+  .btn-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .btn-container button {
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+  }
+  .btn-container #twitter i {
+    font-size: 1.6rem;
+  }
+  .btn-container #new-quote i {
+    font-size: 1.6rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

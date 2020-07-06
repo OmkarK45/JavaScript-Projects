@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +8,6 @@
 html{
     font-size: 10px;
 }
-
 .banner-area .banner-img{
     min-height: 100vh;
     background-image: url(../img/bg.jpg);
@@ -52,4 +52,81 @@ ul>li{
     list-style: none;
     text-transform: uppercase;
     font-size: 1.6rem;
+}
+.quote-container{
+    background-color:rgba(0,0,0,0.3);
+    margin: 0 auto;
+    width: 50%;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    // justify-content: space-evenly;
+    .quote-text{
+        font-size: 4rem;
+        color: white;
+        font-family: 'Cabin', sans-serif;
+        i{
+            font-size: 5rem;
+        }
+    }
+    .quote-author{
+        font-size: 2rem;
+        margin: 2rem auto;
+        color: white;
+        font-family: 'Montserrat', sans-serif;        
+        font-size: 2.7rem;
+    }
+}
+.btn-container{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-between;
+    button{
+        background-color: #f7f7f7;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        border: none;
+        font-size: 2.5rem;
+    }
+    #twitter i{
+        color: #00acee;
+        margin-right: .5rem;
+        font-size: 2.5rem;
+    }
+    #new-quote i{
+        margin-right: .5rem;
+        font-size: 2.5rem;
+    }
+}
+@media(max-width:968px){
+    .quote-container{
+        width: 90%;
+        
+        .quote-text{
+            font-size: 3.5rem;
+            color: white;
+            font-family: 'Cabin', sans-serif;
+        }
+        .quote-author{
+            font-size: 1.9rem;
+        }
+    }
+    .btn-container{
+        justify-content: space-between;
+        button{
+            padding: 0.5rem 1rem;
+            font-size: 1.6rem;
+        }
+        #twitter i{
+            font-size: 1.6rem;
+        }
+        #new-quote i{
+            font-size: 1.6rem;
+        }
+    }
 }
