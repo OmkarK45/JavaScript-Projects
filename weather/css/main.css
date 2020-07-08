@@ -38,9 +38,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: auto;
 }
 
@@ -49,6 +48,56 @@ body {
   padding-bottom: 1rem;
   font-family: 'Product Sans',sans-serif;
   font-size: 2.5rem;
+}
+
+.title .fa-bars, .title .fa-moon, .title .fa-times {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.title .fa-times {
+  display: none;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  position: fixed;
+  z-index: 1500;
+  background-color: white;
+  color: #b2b2b2;
+  height: 100vh;
+  display: none;
+  pointer-events: none;
+}
+
+.show-menu {
+  display: block;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav-list .nav-item {
+  font-size: 2rem;
+  margin: 0 auto;
+  list-style: none;
+  margin: 2rem auto;
+  border-bottom: 2px solid white;
+  font-family: 'Product Sans',sans-serif;
 }
 
 .location {

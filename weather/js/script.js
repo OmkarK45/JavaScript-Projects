@@ -13,6 +13,17 @@ const windSpeedElement = document.querySelector('.wind-speed-pc');
 const precipitationElement = document.querySelector('.precipitation-pc');
 const dayElement = document.querySelector('.day');
 const container = document.querySelector('.container');
+const menuToggle = document.querySelector('.fa-bars');
+const navElement = document.querySelector('.nav');
+const menuElement = document.querySelector('.menu');
+const crossElement = document.querySelector('.fa-times');
+// Opening side menu
+menuToggle.addEventListener('click',()=>{
+  navElement.classList.toggle('show-menu');
+  
+})
+
+
 const weather = {
     conditions:{},
     unit:'celsius',
@@ -135,7 +146,7 @@ tempElement.addEventListener('click',function(){
         weather.unit = 'fahrenheit';
         tempElement.innerHTML = `<p>${fahrenheit}<span> F</span></p>`
     }else{
-        tempElement.innerHTML = `<p>${weather.temperature-KELVIN}<span> °C</span></p>`;
+        tempElement.innerHTML = `<p>${Math.floor(weather.temperature-KELVIN)}<span> °C</span></p>`;
         weather.unit = 'celsius';
     }
 })
