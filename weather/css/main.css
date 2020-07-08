@@ -39,8 +39,12 @@ body {
           flex-direction: column;
 }
 
-.location .city, .location .country, .location .date {
+.location .city, .location .country, .location .date, .location .location-icon {
   margin: .3rem 1.6rem;
+}
+
+.location .location-icon {
+  font-size: 1.6rem;
 }
 
 .location .city {
@@ -91,7 +95,7 @@ body {
 
 .container {
   background-color: #21D4FD;
-  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  background: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   color: white;
   -webkit-box-shadow: 0px 11px 18px 5px rgba(183, 33, 255, 0.15);
           box-shadow: 0px 11px 18px 5px rgba(183, 33, 255, 0.15);
@@ -137,10 +141,41 @@ body {
   font-style: 700;
 }
 
+.container .weather-container .temperature-value h1 {
+  font-size: 1.6rem;
+}
+
 .container .temperature-description {
   font-size: 1.4rem;
   padding: 2rem;
   font-family: 'Product Sans',sans-serif;
+  text-transform: capitalize;
+}
+
+.temperature-details {
+  font-size: initial;
+}
+
+.temperature-details .row-details-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.temperature-details .row-details-1 .min-temp-title, .temperature-details .row-details-1 .max-temp-title {
+  margin: 1rem;
+  margin-left: 0;
+}
+
+.temperature-details .row-details-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.temperature-details .row-details-2 .min-temp-value, .temperature-details .row-details-2 .max-temp-value {
+  margin: 0 1rem;
+  margin-left: 0;
 }
 
 .weather-conditions-indicator {
@@ -154,7 +189,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.weather-conditions-indicator .humidity, .weather-conditions-indicator .precipitation, .weather-conditions-indicator .wind-speed {
+.weather-conditions-indicator .icon {
   font-size: 2rem;
   padding: 1.6rem 2.3rem;
   border-radius: 10px;
@@ -168,8 +203,22 @@ body {
 
 .weather-conditions-indicator .humidity {
   background-color: #E7EFF1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-shadow: -3px 11px 50px 5px #dce2e3;
           box-shadow: -3px 11px 50px 5px #dce2e3;
+}
+
+.weather-conditions-indicator .humidity-pc, .weather-conditions-indicator .wind-speed-pc, .weather-conditions-indicator .precipitation-pc {
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Product Sans',sans-serif;
+  margin: 5px auto;
 }
 
 .weather-conditions-indicator .precipitation {
@@ -189,5 +238,36 @@ body {
   margin: 0 4.9rem;
   margin-bottom: 2rem;
   font-family: 'Product Sans';
+}
+
+.container {
+  background: linear-gradient(19deg, #91ebff 0%, #8c34ff 100%);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 7s ease infinite;
+  animation: AnimationName 7s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

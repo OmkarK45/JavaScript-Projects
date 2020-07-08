@@ -19,6 +19,7 @@
       --dark-red:#a95121;
       --blue-color:#3265f1;
   }
+
 // Global Settings 
 *{
     margin: 0;
@@ -32,8 +33,11 @@ body{
     display: flex;
     padding: 3rem 2rem;
     flex-direction: column;
-    .city,.country,.date{
+    .city,.country,.date,.location-icon{
         margin: .3rem 1.6rem;
+    }
+    .location-icon{
+        font-size: 1.6rem;
     }
     .city{
         font-size: 1rem;
@@ -73,7 +77,7 @@ body{
 }
 .container{
     background-color: #21D4FD;
-    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    background: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
     color: white;
     box-shadow: 0px 11px 18px 5px rgba(183,33,255,0.15);
     max-width: 900px;
@@ -95,25 +99,46 @@ body{
         display: flex;
         align-items: center;
         font-family: 'Product Sans',sans-serif;
+        
         .temperature-value{
             font-size: 3rem;
             margin: 0 2rem;
             font-style: 700;
+            h1{
+                font-size: 1.6rem;
+            }
         }
     }
     .temperature-description{
         font-size: 1.4rem;
         padding: 2rem;
         font-family: 'Product Sans',sans-serif;
-        
+        text-transform: capitalize;
     }
+}
+.temperature-details{
+    font-size: initial;
+    .row-details-1{
+        display: flex;
+        .min-temp-title, .max-temp-title{
+            margin: 1rem;
+            margin-left: 0;
+        }
+    }  
+    .row-details-2{
+        display: flex;
+        .min-temp-value, .max-temp-value{
+            margin: 0 1rem;
+            margin-left:0;
+        }
+    } 
 }
 .weather-conditions-indicator{
     display: flex;
     justify-content: space-between;
     margin: 4rem 2rem;
     margin-bottom: 2rem;
-    .humidity, .precipitation, .wind-speed{
+    .icon{
         font-size: 2rem;
         padding: 1.6rem 2.3rem;
         border-radius: 10px;
@@ -124,8 +149,16 @@ body{
     }
     .humidity{
         background-color: #E7EFF1;
+        display: flex;
+        flex-direction: column;
         box-shadow: -3px 11px 50px 5px rgba(220,226,227,1);
-
+        
+    }
+    .humidity-pc,.wind-speed-pc,.precipitation-pc{
+        text-align: center;
+        font-size: 1rem;
+        font-family: 'Product Sans',sans-serif;
+        margin: 5px auto;
     }
     .precipitation{
         box-shadow: -3px 11px 50px 5px rgba(213,217,213,1);
@@ -141,3 +174,33 @@ body{
     margin-bottom: 2rem;
     font-family: 'Product Sans';
 }
+// Gradient Animation !
+.container
+    {
+        background: linear-gradient(19deg, #91ebff 0%, #8c34ff 100%);
+        background-size: 400% 400%;
+        -webkit-animation: AnimationName 7s ease infinite;
+        -moz-animation: AnimationName 7s ease infinite;
+        -o-animation: AnimationName 7s ease infinite;
+        animation: AnimationName 7s ease infinite;
+    }
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
