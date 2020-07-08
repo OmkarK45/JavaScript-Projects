@@ -18,6 +18,10 @@
       --pink-color:#577cbf;
       --dark-red:#a95121;
       --blue-color:#3265f1;
+      --clear-sky:linear-gradient(19deg, #91ebff 0%, #8c34ff 100%);
+      --night-sky:linear-gradient(182deg, #373298 0%, #092222 100%);
+      --haze-sky: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+      
   }
 
 // Global Settings 
@@ -29,10 +33,32 @@
 body{
     font-size: 10px;
 }
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    // border: 1px solid red;
+    // box-shadow: -1px 11px 41px -2px rgba(232,232,232,0.57);
+    h2{
+        padding-top: 1rem;
+        padding-bottom: 1rem;;
+        text-transform: uppercase;
+        font-family: 'Product Sans',sans-serif;
+        font-size: 2.5rem;
+    }
+}
 .location{
     display: flex;
     padding: 3rem 2rem;
     flex-direction: column;
+    // border: 1px solid #f7f7f7;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+background-image: linear-gradient(182deg, #94e5ff 100%,#ffffff 10%);
+
+    border-radius: 10px;
     .city,.country,.date,.location-icon{
         margin: .3rem 1.6rem;
     }
@@ -67,7 +93,7 @@ body{
     border-radius: 10px;
     background-color: #fff;
     border: 1px solid #f7f7f7;
-    box-shadow: 0px 11px 18px 5px rgba(240,240,240,1);
+    // box-shadow: 0px 11px 18px 5px rgba(240,240,240,1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,7 +203,7 @@ body{
 // Gradient Animation !
 .container
     {
-        background: linear-gradient(19deg, #91ebff 0%, #8c34ff 100%);
+        background: var(--clear-sky);
         background-size: 400% 400%;
         -webkit-animation: AnimationName 7s ease infinite;
         -moz-animation: AnimationName 7s ease infinite;

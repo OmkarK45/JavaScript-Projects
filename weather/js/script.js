@@ -103,7 +103,7 @@ function getWeather(latitude, longitude) {
 // Changing the html dom !
 function displayWeather(){
     // 1. Changing Location HTML
-    locationElement.innerHTML = `<h2>${weather.location}</h2>`
+    locationElement.innerHTML = `<h2>${weather.location},</h2>`
     countryElement.innerHTML = `<h2>${weather.country}</h2>`
     dateElement.innerHTML = `<p>${months[month]},${date} ${days[day]}</p>`
     tempElement.textContent = `${Math.floor(weather.temperature-KELVIN)} °C`;
