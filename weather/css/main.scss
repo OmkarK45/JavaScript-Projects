@@ -43,7 +43,7 @@ body{
     h2{
         padding-top: 1rem;
         padding-bottom: 1rem;;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         font-family: 'Product Sans',sans-serif;
         font-size: 2.5rem;
     }
@@ -202,6 +202,7 @@ background-image: linear-gradient(182deg, #94e5ff 100%,#ffffff 10%);
     font-family: 'Product Sans';
 }
 // Gradient Animation !
+
 .container
     {
         background: var(--clear-sky);
@@ -230,6 +231,12 @@ background-image: linear-gradient(182deg, #94e5ff 100%,#ffffff 10%);
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}
         100%{background-position:0% 50%}
+    }
+    .dark-sky{
+        background: var(--night-sky);
+    }
+    .clear-sky{
+        background: var(--clear-sky);
     }
     // Responsive Code
 @media(min-width:1200px){

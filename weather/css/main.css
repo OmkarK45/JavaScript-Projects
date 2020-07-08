@@ -47,7 +47,6 @@ body {
 .title h2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  text-transform: uppercase;
   font-family: 'Product Sans',sans-serif;
   font-size: 2.5rem;
 }
@@ -295,6 +294,14 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.dark-sky {
+  background: var(--night-sky);
+}
+
+.clear-sky {
+  background: var(--clear-sky);
 }
 
 @media (min-width: 1200px) {
