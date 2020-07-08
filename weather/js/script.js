@@ -36,7 +36,7 @@ if (window.navigator.geolocation) {
 function success(data) {
   let latitude = data.coords.latitude;
   let longitude = data.coords.longitude;
-  notificationElement.textContent = "Location Found !";
+  notificationElement.textContent = "";
   console.log(data.coords.latitude,data.coords.longitude);
   getWeather(latitude, longitude);
 }
