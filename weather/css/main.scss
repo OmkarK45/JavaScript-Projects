@@ -55,6 +55,7 @@ body{
     .fa-times{
         display: none;
     }
+    
 }
 // .show-cross{
 //     display: block;
@@ -74,10 +75,11 @@ body{
     height: 100vh;
     display: none;
     pointer-events: none;
-    
+    transition: all 1s ease-in-out;
 }
 .show-menu{
     display: block;
+   
 }
 .nav-list{
     display: flex;

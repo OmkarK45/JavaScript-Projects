@@ -75,6 +75,8 @@ body {
   height: 100vh;
   display: none;
   pointer-events: none;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .show-menu {
