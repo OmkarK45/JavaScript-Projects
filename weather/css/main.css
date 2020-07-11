@@ -11,7 +11,7 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
 .title-dark {
-  background-color: #3b2c85;
+  background-color: #373737;
   color: white;
 }
 
@@ -21,6 +21,25 @@
 
 .show-menu-dark {
   background-color: #000;
+}
+
+.wind-speed-dark {
+  background-color: #E9F7EA !important;
+  -webkit-box-shadow: -3px 11px 50px 5px #d5d9d5;
+          box-shadow: -3px 11px 50px 5px #d5d9d5;
+}
+
+.humidity-pc-dark, .wind-speed-pc-dark, .precipitation-pc-dark {
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'Product Sans',sans-serif;
+  margin: 5px auto;
+}
+
+.precipitation-dark {
+  -webkit-box-shadow: -3px 11px 50px 5px #d5d9d5;
+          box-shadow: -3px 11px 50px 5px #d5d9d5;
+  background-color: #E6F1F3;
 }
 
 @font-face {
@@ -134,11 +153,6 @@ body {
   color: #a09e9e;
 }
 
-.show-menu-dark {
-  background-color: #219897;
-  color: white;
-}
-
 .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,6 +179,14 @@ body {
     text-decoration: none;
     color: #545E6F;
   }
+}
+
+.show-menu-dark {
+  background-color: #219897;
+}
+
+.show-menu-dark .nav-item a {
+  color: white;
 }
 
 .location {
@@ -195,18 +217,21 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
   font-family: 'Product Sans';
+  font-family: 'Geomanist';
 }
 
 .location .country {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-family: 'Product Sans';
+  font-family: 'Geomanist';
 }
 
 .location .date {
   font-size: 0.7rem;
   text-transform: uppercase;
   font-family: 'Product Sans';
+  font-family: 'Geomanist';
   letter-spacing: 2px;
   color: gray;
   margin-top: 0.6rem;
@@ -231,6 +256,7 @@ body {
           justify-content: center;
   font-size: 1.3rem;
   font-family: 'Product Sans',sans-serif;
+  font-family: 'Geomanist';
   color: var(--dark-red);
   display: none;
 }
@@ -263,6 +289,7 @@ body {
 .container .day {
   font-size: 2rem;
   font-family: 'Product Sans',sans-serif;
+  font-family: 'Geomanist';
   font-weight: 600;
   padding: 2rem;
 }
@@ -275,6 +302,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Product Sans',sans-serif;
+  font-family: 'Geomanist';
 }
 
 .container .weather-container .temperature-value {
@@ -370,6 +398,12 @@ body {
           box-shadow: -3px 11px 50px 5px #d5d9d5;
   border-radius: 10px;
   background-color: #E6F1F3;
+}
+
+.humidity-dark {
+  background-color: #000;
+  -webkit-box-shadow: -3px 11px 50px 5px #dce2e3;
+          box-shadow: -3px 11px 50px 5px #dce2e3;
 }
 
 .weather-conditions-text {

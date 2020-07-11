@@ -107,10 +107,7 @@ body{
     text-decoration: none;
     color: #a09e9e;
 }
-.show-menu-dark{
-    background-color: #219897;
-    color: white;
-}
+
 .nav-list{
     display: flex;
     flex-direction: column;
@@ -132,6 +129,12 @@ body{
         color: #545E6F;
     }
 }
+.show-menu-dark{
+    background-color: #219897;
+    .nav-item a{
+        color: white;
+    } 
+}
 .location{
     display: flex;
     padding: 3rem 2rem;
@@ -152,16 +155,19 @@ body{
         font-size: 1rem;
         text-transform: uppercase;
         font-family: 'Product Sans';
+        font-family: 'Geomanist';
     }
     .country{
         font-size: 0.8rem;
         text-transform: uppercase;
         font-family: 'Product Sans';
+        font-family: 'Geomanist';
     }
     .date{
         font-size: 0.7rem;
         text-transform: uppercase;
         font-family: 'Product Sans';
+        font-family: 'Geomanist';
         letter-spacing: 2px;
         color:gray;
         margin-top: 0.6rem;
@@ -183,6 +189,7 @@ body{
     justify-content: center;
     font-size: 1.3rem;
     font-family: 'Product Sans',sans-serif;
+    font-family: 'Geomanist';
     color: var(--dark-red);
     display: none;
 }
@@ -203,6 +210,7 @@ body{
     .day{
         font-size: 2rem;
         font-family: 'Product Sans',sans-serif;
+        font-family: 'Geomanist';
         font-weight: 600;
         padding: 2rem ;
     }
@@ -210,7 +218,7 @@ body{
         display: flex;
         align-items: center;
         font-family: 'Product Sans',sans-serif;
-        
+        font-family: 'Geomanist';
         .temperature-value{
             font-size: 3rem;
             margin: 0 2rem;
@@ -277,6 +285,10 @@ body{
         border-radius: 10px;
         background-color: #E6F1F3;
     }
+}
+.humidity-dark{
+    background-color: #000;
+    box-shadow: -3px 11px 50px 5px rgba(220,226,227,1);
 }
 .weather-conditions-text{
     display: flex;

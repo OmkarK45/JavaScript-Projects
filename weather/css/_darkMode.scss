@@ -12,7 +12,7 @@
 */
 
 .title-dark{
-    background-color: #3b2c85;
+    background-color: rgb(55,55,55);
     color: white;
 }
 .body-dark{
@@ -20,4 +20,20 @@
 }
 .show-menu-dark{
     background-color: #000;
+}
+.wind-speed-dark{
+    background-color: #E9F7EA !important;
+    box-shadow: -3px 11px 50px 5px rgba(213,217,213,1);
+    
+}
+
+.humidity-pc-dark,.wind-speed-pc-dark,.precipitation-pc-dark{
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Product Sans',sans-serif;
+    margin: 5px auto;
+}
+.precipitation-dark{
+    box-shadow: -3px 11px 50px 5px rgba(213,217,213,1);
+    background-color: #E6F1F3;
 }
