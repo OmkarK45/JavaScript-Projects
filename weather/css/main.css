@@ -1,9 +1,26 @@
+/*
+    Title bar will be sort of violet
+    All text remain white
+    Background : pastel gray 
+    All gradients : Muted and darker
+
+*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+.title-dark {
+  background-color: #131231;
+  color: white;
+}
+
 @font-face {
   font-family: 'Product Sans';
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url("/weather/fonts/geomanist-regular.woff2") format("woff2");
 }
 
 :root {
@@ -29,6 +46,7 @@
 
 body {
   font-size: 10px;
+  background-color: #F1F2F5;
 }
 
 .title {
@@ -41,22 +59,24 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: auto;
+  margin-bottom: 2rem;
 }
 
 .title h2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: 'Product Sans',sans-serif;
+  font-family: 'Geomanist', sans-serif;
   font-size: 2.5rem;
 }
 
-.title .fa-bars, .title .fa-moon, .title .fa-times {
+.title .fa-bars, .title .fa-moon, .title .fa-times, .title .fa-sun {
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.title .fa-times {
-  display: none;
+.title .fa-umbrella {
+  color: orange;
 }
 
 .nav {
@@ -79,8 +99,21 @@ body {
   transition: all 1s ease-in-out;
 }
 
+@media (min-width: 1000px) {
+  .nav {
+    width: 100%;
+    background-color: #F1F2F5;
+  }
+}
+
 .show-menu {
   display: block;
+  pointer-events: all;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #a09e9e;
 }
 
 .nav-list {
@@ -98,8 +131,17 @@ body {
   margin: 0 auto;
   list-style: none;
   margin: 2rem auto;
-  border-bottom: 2px solid white;
-  font-family: 'Product Sans',sans-serif;
+  font-family: 'Geomanist',sans-serif;
+}
+
+@media (min-width: 1000px) {
+  .nav-item {
+    border: none;
+  }
+  .nav-item a {
+    text-decoration: none;
+    color: #545E6F;
+  }
 }
 
 .location {
@@ -167,6 +209,7 @@ body {
   font-size: 1.3rem;
   font-family: 'Product Sans',sans-serif;
   color: var(--dark-red);
+  display: none;
 }
 
 .container {
@@ -188,7 +231,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 2rem auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -275,6 +318,7 @@ body {
   background-color: #E9F7EA;
   -webkit-box-shadow: -3px 11px 50px 5px #d5d9d5;
           box-shadow: -3px 11px 50px 5px #d5d9d5;
+  border-radius: 10px;
 }
 
 .weather-conditions-indicator .humidity {
@@ -288,6 +332,7 @@ body {
           flex-direction: column;
   -webkit-box-shadow: -3px 11px 50px 5px #dce2e3;
           box-shadow: -3px 11px 50px 5px #dce2e3;
+  border-radius: 10px;
 }
 
 .weather-conditions-indicator .humidity-pc, .weather-conditions-indicator .wind-speed-pc, .weather-conditions-indicator .precipitation-pc {
@@ -300,6 +345,7 @@ body {
 .weather-conditions-indicator .precipitation {
   -webkit-box-shadow: -3px 11px 50px 5px #d5d9d5;
           box-shadow: -3px 11px 50px 5px #d5d9d5;
+  border-radius: 10px;
   background-color: #E6F1F3;
 }
 

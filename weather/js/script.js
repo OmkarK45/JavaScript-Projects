@@ -17,10 +17,21 @@ const menuToggle = document.querySelector('.fa-bars');
 const navElement = document.querySelector('.nav');
 const menuElement = document.querySelector('.menu');
 const crossElement = document.querySelector('.fa-times');
+const menuToggleIcon = document.getElementById('menuToggle');
 // Opening side menu
-menuToggle.addEventListener('click',()=>{
-  navElement.classList.toggle('show-menu');
+menuElement.addEventListener('click',()=>{
+  navElement.classList.toggle('show-menu');  
   
+})
+menuElement.addEventListener('click',function(){
+  if(menuToggleIcon.classList.contains('fa-bars')){
+    console.log('Yes Bars');
+    menuToggleIcon.classList.remove('fa-bars');
+    menuToggleIcon.classList.add('fa-times');
+  }else{
+    menuToggleIcon.classList.add('fa-bars');
+    menuToggleIcon.classList.remove('fa-times');
+  }
 })
 
 

@@ -1,5 +1,6 @@
 // Typography
 // 1. Nunito
+@import 'darkMode';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
 // 2. Product Sans
 @font-face {
@@ -7,7 +8,12 @@
     font-style: normal;
     font-weight: 400;
     src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
-  }
+}
+// 3. Geomanist
+@font-face{
+    font-family: 'Geomanist';
+    src: url('/weather/fonts/geomanist-regular.woff2') format('woff2');
+}
 // 2. Color palette
   :root{
       --main-bg-color:#eaf0f5;
@@ -32,6 +38,7 @@
 }
 body{
     font-size: 10px;
+    background-color: #F1F2F5;
 }
 // Navigation
 
@@ -41,19 +48,24 @@ body{
     align-items: center;
     justify-content: space-around;
     margin: auto;
+    margin-bottom: 2rem;
     h2{
         padding-top: 1rem;
         padding-bottom: 1rem;;
         // text-transform: uppercase;
         font-family: 'Product Sans',sans-serif;
+        font-family: 'Geomanist', sans-serif;
         font-size: 2.5rem;
     }
-    .fa-bars,.fa-moon,.fa-times{
+    .fa-bars,.fa-moon,.fa-times,.fa-sun{
         font-size: 1.5rem;
         cursor: pointer;
     }
-    .fa-times{
-        display: none;
+    // .fa-times{
+    //     display: none;
+    // }
+    .fa-umbrella{
+        color: orange;
     }
     
 }
@@ -77,10 +89,21 @@ body{
     pointer-events: none;
     transition: all 1s ease-in-out;
 }
+@media(min-width:1000px){
+    .nav{
+        width: 100%;
+        background-color: #F1F2F5;
+    }
+}
 .show-menu{
     display: block;
-   
+   pointer-events: all;
 }
+.nav-item a{
+    text-decoration: none;
+    color: #a09e9e;
+}
+
 .nav-list{
     display: flex;
     flex-direction: column;
@@ -89,8 +112,17 @@ body{
         margin: 0 auto;
         list-style: none;
         margin: 2rem auto;
-        border-bottom: 2px solid white;
-        font-family: 'Product Sans',sans-serif;
+        // border-bottom: 2px solid white;
+        font-family: 'Geomanist',sans-serif;
+    }
+}
+@media(min-width:1000px){
+    .nav-item{
+        border: none;
+    }
+    .nav-item a{
+        text-decoration: none;
+        color: #545E6F;
     }
 }
 .location{
@@ -145,6 +177,7 @@ body{
     font-size: 1.3rem;
     font-family: 'Product Sans',sans-serif;
     color: var(--dark-red);
+    display: none;
 }
 .container{
     background-color: #21D4FD;
@@ -158,7 +191,7 @@ body{
     justify-content: center;
     border-radius: 10px;
     // testing
-    margin: 0 auto;
+    margin: 2rem auto;
     align-items: center;
     .day{
         font-size: 2rem;
@@ -217,13 +250,14 @@ body{
     .wind-speed{
         background-color: #E9F7EA;
         box-shadow: -3px 11px 50px 5px rgba(213,217,213,1);
+        border-radius: 10px;
     }
     .humidity{
         background-color: #E7EFF1;
         display: flex;
         flex-direction: column;
         box-shadow: -3px 11px 50px 5px rgba(220,226,227,1);
-        
+        border-radius: 10px;
     }
     .humidity-pc,.wind-speed-pc,.precipitation-pc{
         text-align: center;
@@ -233,7 +267,7 @@ body{
     }
     .precipitation{
         box-shadow: -3px 11px 50px 5px rgba(213,217,213,1);
-
+        border-radius: 10px;
         background-color: #E6F1F3;
     }
 }
