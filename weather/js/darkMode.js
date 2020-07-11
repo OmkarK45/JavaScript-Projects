@@ -2,9 +2,11 @@
 const darkBtn = document.querySelector('.night-mode-toggle');
 const navBar = document.querySelector('.title');
 const darkBtnIcon = document.getElementById('darkModeIcon');
-
+const bodyElement = document.getElementById('body');
+const menuDark = document.querySelector('.nav');
 darkBtn.addEventListener('click',function(){
-    navBar.classList.toggle('title-dark');
+    
+    darkMode();
 })
 darkBtn.addEventListener('click',function(){
     if(darkBtnIcon.classList.contains('fa-moon')){
@@ -17,3 +19,8 @@ darkBtn.addEventListener('click',function(){
         darkBtnIcon.classList.remove('fa-sun');
     }
 })
+function darkMode(){
+    navBar.classList.toggle('title-dark');
+    bodyElement.classList.toggle('body-dark');
+    menuDark.classList.toggle('show-menu-dark')
+}
