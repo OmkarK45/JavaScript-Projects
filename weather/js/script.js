@@ -142,7 +142,8 @@ function displayWeather(){
     maxTempElement.innerHTML    = `<p>${Math.floor(weather.temp_max-KELVIN)}°C</p>`
     humidityElement.innerHTML   = `<p>${weather.conditions.humidity} %</p>`
     windSpeedElement.innerHTML  = `<p>${weather.conditions.wind_speed} m/s</p>`;
-    precipitationElement.innerHTML = `<p>${weather.conditions.pressure} atm</p>`
+    precipitationElement.innerHTML = `<p>${weather.conditions.pressure} atm</p>`;
+    iconElement.setAttribute('title',`${(weather.description).toUpperCase()}`);
 }
 
 function CtoF(temperature){

@@ -1,5 +1,5 @@
 // Selecting DOM - Dark Mode Toggle 
-
+const containerDark  = document.querySelector('.container');
 const darkBtn = document.querySelector('.night-mode-toggle');
 const navBar = document.querySelector('.title');
 const darkBtnIcon = document.getElementById('darkModeIcon');
@@ -8,7 +8,10 @@ const menuDark = document.querySelector('.nav');
 const humidityElementDark = document.querySelector('.humidity');
 const windSpeedElementDark = document.querySelector('.wind-speed');
 const precipitationElementDark = document.querySelector('.precipitation');
+const locationDark = document.querySelector('.location');
+const dateDark = document.querySelector('.date');
 // Calling Dark Mode When Clicked 
+const weatherTextDark = document.querySelector('.weather-conditions-indicator')
 darkBtn.addEventListener('click',function(){
     darkMode();
 })
@@ -27,5 +30,11 @@ function darkMode(){
     navBar.classList.toggle('title-dark');
     bodyElement.classList.toggle('body-dark');
     menuDark.classList.toggle('show-menu-dark');
-    humidityElementDark.classList.add('humidity-dark')
+    humidityElementDark.classList.toggle('wind-speed-dark');
+    precipitationElementDark.classList.toggle('wind-speed-dark');
+    containerDark.classList.toggle('container-dark');
+    windSpeedElementDark.classList.toggle('wind-speed-dark');
+    locationDark.classList.toggle('location-dark');
+    weatherTextDark.classList.toggle('weather-conditions-text-dark');
+    dateDark.classList.toggle('date-dark');
 }

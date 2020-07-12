@@ -23,23 +23,10 @@
   background-color: #000;
 }
 
-.wind-speed-dark {
-  background-color: #E9F7EA !important;
-  -webkit-box-shadow: -3px 11px 50px 5px #d5d9d5;
-          box-shadow: -3px 11px 50px 5px #d5d9d5;
-}
-
-.humidity-pc-dark, .wind-speed-pc-dark, .precipitation-pc-dark {
-  text-align: center;
-  font-size: 1rem;
-  font-family: 'Product Sans',sans-serif;
-  margin: 5px auto;
-}
-
-.precipitation-dark {
-  -webkit-box-shadow: -3px 11px 50px 5px #d5d9d5;
-          box-shadow: -3px 11px 50px 5px #d5d9d5;
-  background-color: #E6F1F3;
+.wind-speed-dark, .humidity-pc-dark, .precipitation-dark {
+  background-color: #747474 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 @font-face {
@@ -146,6 +133,8 @@ body {
 .show-menu {
   display: block;
   pointer-events: all;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .nav-item a {
@@ -182,11 +171,16 @@ body {
 }
 
 .show-menu-dark {
-  background-color: #219897;
+  background-color: #262F38;
 }
 
 .show-menu-dark .nav-item a {
   color: white;
+}
+
+.container-dark {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .location {
@@ -214,7 +208,7 @@ body {
 }
 
 .location .city {
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   font-family: 'Product Sans';
   font-family: 'Geomanist';
@@ -228,13 +222,22 @@ body {
 }
 
 .location .date {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   font-family: 'Product Sans';
   font-family: 'Geomanist';
   letter-spacing: 2px;
-  color: gray;
+  color: black;
   margin-top: 0.6rem;
+}
+
+.location-dark {
+  background-image: linear-gradient(182deg, #2d6679 100%, #ffffff 10%);
+  color: white;
+}
+
+.date-dark {
+  color: white !important;
 }
 
 .notification {
@@ -419,6 +422,10 @@ body {
   font-family: 'Product Sans';
 }
 
+.weather-conditions-text-dark {
+  color: white;
+}
+
 .container {
   background: var(--clear-sky);
   background-size: 400% 400%;
@@ -485,5 +492,21 @@ body {
     margin: 0 auto;
     margin-top: 2rem;
   }
+}
+
+.footer {
+  font-size: 1.5rem;
+  text-align: center;
+  height: 2rem;
+}
+
+.footer p {
+  padding: 1rem;
+  font-family: monospace;
+  color: gray;
+}
+
+.footer i {
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */
