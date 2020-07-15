@@ -50,3 +50,14 @@ toggleSwitch.addEventListener("change", switchTheme);
 // Check local storage for theme 
 const currentTheme = localStorage.getItem('theme');
 console.log(currentTheme);
+if(currentTheme){
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    if(currentTheme === 'dark'){
+        toggleSwitch.checked = true;
+        darkMode();
+    }
+    else{
+        toggleSwitch.checked = false;
+        lightMode();
+    }
+}
