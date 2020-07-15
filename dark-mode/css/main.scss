@@ -84,7 +84,7 @@ a:focus {
 #nav{
     padding: 2rem 2rem;
     z-index: 10;
-    width: 90%;
+    width: 100%;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -123,6 +123,7 @@ a:focus {
 }
 .image-title{
     padding: 30px;
+    color: var(--primary-color);
     h3{
         font-size: 2.5rem;
     }
@@ -230,7 +231,7 @@ a:focus {
     z-index: 100;
     position: fixed;
     right: 25px;
-    top: 30px;
+    top: 20px;
   }
   
 .theme-switch-wrapper span {
