@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.1/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Dark Mode</title>
 </head>
 <body>
@@ -35,7 +36,8 @@
         </div>
     </section>
     <!-- Section Two -->
-    <section id="about">
+    <section id="about" data-aos="fade-up"
+    data-aos-duration="500">
         <h1>Section 2</h1>
         <div class="about-container">
             <div class="card">
@@ -68,7 +70,7 @@
         </div>
     </section>
     <!-- Section Three -->
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
         <h1>Buttons</h1>
         <div class="buttons">
             <button class="primary">Primary</button>
@@ -108,5 +110,9 @@
         </div>
     </section>
     <script src="js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
