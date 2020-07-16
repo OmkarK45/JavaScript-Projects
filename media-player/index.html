@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.scss">
-    <title>Media Player</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="http://pro.fontawesome.com/releases/v5.13.1/css/all.css">
+    <title>TuneX</title>
 </head>
 <body>
-    
+    <div class="player-container">
+        <!-- Song -->
+        <div class="img-container">
+            <img src="src/img/image1.png" alt="Album Art">
+        </div>
+        <h2 id="title">Electric Chill Machine</h2>
+        <h3 id="artist">Jacinto</h3>
+        <audio src="src/music/04. Lean On (feat. MØ & DJ Snake).flac"></audio>
+        <!-- Progress -->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration">2:06</span>
+            </div>
+        </div>
+        <!-- Controls -->
+        <div class="player-controls">
+            <i class="fal fa-backward" id="prev" title="Previous"></i>
+            <i class="fal fa-play main-button" id="play" title="Play"></i>
+            <i class="fal fa-forward" id="next" title="Next"></i>
+        </div>
+    </div>
 
     <script src="js/app.js"></script>
 </body>
