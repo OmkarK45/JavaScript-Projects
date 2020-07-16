@@ -37,6 +37,7 @@ const songs = [
 let isPlaying = false;
 
 
+
 // Play 
 function playSong(){
     isPlaying = true;
@@ -61,11 +62,36 @@ function loadSong(song){
     music.src = `src/music/${song.name}.flac`;
     image.src = `src/img/${song.name}.png`;
 }
-// Current song
-let songIndex = 3;
 
-// On Load select first song 
+// Current song
+let songIndex = 0;
+
+// Previous Song
+function prevSong(){
+    songIndex--;
+    if(songIndex < 0){
+        songIndex = songs.length - 1;
+    }
+    console.log(songIndex);
+    loadSong(songs[songIndex]);
+    playSong();
+}
+// Next Song
+function nextSong(){
+    songIndex++;
+    if(songIndex>songs.length-1){
+        songIndex = 0;
+    }
+    console.log(songIndex);
+    loadSong(songs[songIndex]);
+    playSong();
+}
+
+// On load - Select first song 
 loadSong(songs[songIndex]);
+
 // Event Listener for forwards and backward
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
+
+// Make BG React to Album art colors 
