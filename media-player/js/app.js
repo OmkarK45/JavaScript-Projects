@@ -61,6 +61,11 @@ function loadSong(song){
     music.src = `src/music/${song.name}.flac`;
     image.src = `src/img/${song.name}.png`;
 }
+// Current song
+let songIndex = 3;
 
 // On Load select first song 
-loadSong(songs[1]);
+loadSong(songs[songIndex]);
+// Event Listener for forwards and backward
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
