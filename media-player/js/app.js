@@ -9,10 +9,26 @@ const nextBtn = document.getElementById('next');
 // Music
 const songs = [
     {
-        name:'04. Lean On (feat. MØ & DJ Snake)',
+        name:'lean on',
         displayName: 'Lean On',
         artist:'Major Lazer ft. MØ & DJ Snake',
-    }
+    },
+    {
+        name:'starboy',
+        displayName: 'Starboy ft. Daft Punk',
+        artist:'The Weeknd',
+    },
+    {
+        name:'blinding lights',
+        displayName: 'Blinding Lights',
+        artist:'The Weeknd',
+    },
+    {
+        name:'take me home',
+        displayName: 'Take Me Home',
+        artist:'Aero Chord',
+    },
+    
 ];
 
 
@@ -37,3 +53,14 @@ function pauseSong(){
 
 // Play or Pause button listener
 playBtn.addEventListener('click',() => (isPlaying ? pauseSong() : playSong()));
+
+// Update DOM
+function loadSong(song){
+    title.textContent = song.displayName;
+    artist.textContent = song.artist;
+    music.src = `src/music/${song.name}.flac`;
+    image.src = `src/img/${song.name}.png`;
+}
+
+// On Load select first song 
+loadSong(songs[1]);
