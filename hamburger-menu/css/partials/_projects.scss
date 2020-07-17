@@ -1,0 +1,42 @@
+/*Section 3 : Projects*/
+.section3{
+    display: grid;
+    height: auto;
+    grid-template-rows: 12rem auto;
+    grid-template-columns:  1fr;
+    background-color: #E8EAEE;
+  }
+  .project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem 3rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 7rem;
+  }
+  .card{
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+    box-shadow: 0 3px 0 rgba(84,94,111,0.2);
+    background-color: #F1F2F5;
+    margin: 4rem;
+    .image-container-card{
+      img{
+        border-radius: 7px;
+      }
+    }
+    .project-title{
+      margin: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    .project-description{
+      margin: 2rem;
+      font-size: 1.4rem;
+    }
+    .btn-container-card{
+      margin: 2rem auto;
+    }
+  }

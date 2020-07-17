@@ -1,0 +1,53 @@
+/*Hero Section Styles*/
+.section1{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    .hero-title{
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      
+    }
+    .hero-subtitle{
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .hero-subtitle::before{
+      content: '';
+      height: 5px;
+      width: 7rem;
+      bottom: 0;
+      right: 5px;
+      border-radius: 3px;
+      background-color: yellow;
+      position: absolute;
+    }
+  }
+/*Chevron Animation*/
+.fa-chevron-down {
+    // align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-size: 4rem;
+    place-items: center;
+    color: white;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+}   
+.bounce-3 {
+    animation-name: bounce-3;
+    animation-timing-function: ease;
+}
+@keyframes bounce-3 {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-100px); }
+    50%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}   
