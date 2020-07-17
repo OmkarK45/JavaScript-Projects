@@ -12,6 +12,7 @@
 .contact-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 7rem;
 }
 .form-container{
     background-color: #fff;
@@ -60,4 +61,44 @@
 }
 .form-submit{
     margin-top: 2rem;
+}
+.social-media-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin-top: 7rem;
+    h1{
+        font-size: 1.9rem;
+        margin: 2rem 0;
+    }
+}
+.social-media{
+    display: flex;
+    .card{
+        margin: 0 3rem;
+        padding: 1rem;
+        cursor: pointer;
+        transition: transform .2s ease-in-out;
+        // background-color: #C13584;
+        i{
+            font-size: 2rem;
+            color: white;
+        }
+        
+    }
+}
+.card:hover{
+    transform: translate(0,-2px);
+}
+.github-card{
+    background-color: #211F1F;
+}
+.instagram-card{
+    background-color: #C13584;
+}
+.linkedin-card{
+    background-color: #0077B5;
+}
+.twitter-card{
+    background-color: #1DA1F2;
 }

@@ -3,6 +3,7 @@
 @import 'partials/aboutme';
 @import 'partials/whatido';
 @import 'partials/contactme';
+@import 'partials/footer';
 /*0. Global Styles*/
 *,
 *::before,
@@ -56,10 +57,9 @@ img{
   height: 100vh;
   // display: flex;
   // background: linear-gradient(-45deg, #ee7752, #e73c7e);
-  background-image: url(../assets/img/rik-van-der-kroon-34753-unsplash.jpg);
+  background-image: url(../assets/img/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  // Darken the bg image
   position: relative;
 }
 
@@ -180,7 +180,12 @@ img{
     margin: 0 4rem;
   }
 }
-// Note : Split these stylesheets into individual modules
+/*Navbar Desktop Animation*/
+.nav-list-item-desktop:hover{
+  color: rgb(182, 170, 170);
+  transition: all 0.2s ease-in-out;
+}
+
 
 
 

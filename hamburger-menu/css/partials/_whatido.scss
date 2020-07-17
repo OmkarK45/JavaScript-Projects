@@ -22,6 +22,9 @@
     margin: auto;
     margin-top: 7rem;
 }
+.works-container:hover{
+    transition: transform .2s ease-in-out;
+}
 .icon-holder i{
     font-size: 3rem;
     margin: 2rem 0;
