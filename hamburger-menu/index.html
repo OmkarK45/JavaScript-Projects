@@ -1,29 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Hamburger Menu</title>
-</head>
-<body>
-    <div class="container">
-        <nav class="nav-bar">
-            <div class="toggle-menu">
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-                <div class="line line3"></div>
-            </div>
-            <ul class="nav-list">
-                <li class="nav-list-item"><a href="" class="nav-link">Home</a></li>
-                <li class="nav-list-item"><a href="" class="nav-link">About</a></li>
-                <li class="nav-list-item"><a href="" class="nav-link">Projects</a></li>
-                <li class="nav-list-item"><a href="" class="nav-link">Clients</a></li>
-                <li class="nav-list-item"><a href="" class="nav-link">Contact Me</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.1/css/all.css">
+    <title>Omkar Kulkarni</title>
+  </head>
+  <body>
+    <!-- Navbar and Hamburger Menu and Hero Section -->
+    <header>
+      <div class="container">
+        <nav class="nav-desktop">
+          <div class="logo">
+            <h3>OK</h3>
+          </div>
+          <ul class="nav-list-desktop">
+            <li class="nav-list-item-desktop"><a href="#">HOME</a></li>
+            <li class="nav-list-item-desktop"><a href="#about">ABOUT</a></li>
+            <li class="nav-list-item-desktop"><a href="#">PROJECTS</a></li>
+            <li class="nav-list-item-desktop"><a href="#">CONTACT</a></li>
+          </ul>
         </nav>
-    </div>
+        <nav class="nav-bar">
+          <div class="toggle-menu">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-list-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-list-item"><a href="" class="nav-link">About</a></li>
+            <li class="nav-list-item">
+              <a href="" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="" class="nav-link">Clients</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="" class="nav-link">Contact Me</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Section 0 : Hero -->
+        <section class="section1">
+          <h1 class="hero-title">I'm Omkar Kulkarni</h1>
+          <h3 class="hero-subtitle">I Code the modern web.</h3>
+          <a href="" class="btn btn-hero">Explore</a>
+        </section>
+      </div>
+    </header>
 
-    <script src="app.js"></script>
-</body>
+    <!-- Section 2 : About Me  -->
+    <section id="about" class="section2">
+       <h1 class="section-title">About Me.</h1>
+        <div class="image-container">
+            <img class="myPhoto" src="assets/img/img3.jpg" alt="">
+        </div>
+        <!-- Will Finish Later ! -->
+        <div class="about-text-container">
+            <p class="about-text-lead-title">Aspiring Full Stack Web Developer</p>
+            <p class="about-text-content">
+                Hi ! I'm Omkar. I am learning Full Stack Web Development. My goal is to create a modern web which is useful to many people. 
+            </p>
+        </div>
+    </section>
+    <!-- Section 3 : Projects -->
+    <section class="section3">
+        <h1 class="section-title">My Projects.</h1>
+        <div class="project-container">
+            <!-- Card -1 -->
+            <div class="card">
+                <div class="image-container-card">
+                    <img src="assets/img/joel-tasche-596911-unsplash.jpg" alt="">
+                </div>
+                <div class="image-caption">
+                    <h3 class="project-title">Unsplash</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, aut?</p>
+                </div>
+                <div class="btn-container-card">
+                    <a href="" class="btn btn-hero btn-sm">GitHub</a>
+                    <a href="" class="btn btn-hero btn-sm">See Live</a>
+                </div>
+            </div>
+            <!-- Card-2 -->
+            <div class="card">
+                <div class="image-container-card">
+                    <img src="assets/img/joel-tasche-596911-unsplash.jpg" alt="">
+                </div>
+                <div class="image-caption">
+                    <h3 class="project-title">Unsplash</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, aut?</p>
+                </div>
+                <div class="btn-container-card">
+                    <a href="" class="btn btn-hero btn-sm">GitHub</a>
+                    <a href="" class="btn btn-hero btn-sm">See Live</a>
+                </div>
+            </div>
+            <!-- Card -3 -->
+            <div class="card">
+                <div class="image-container-card">
+                    <img src="assets/img/joel-tasche-596911-unsplash.jpg" alt="">
+                </div>
+                <div class="image-caption">
+                    <h3 class="project-title">Unsplash</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, aut?</p>
+                </div>
+                <div class="btn-container-card">
+                    <a href="" class="btn btn-hero btn-sm">GitHub</a>
+                    <a href="" class="btn btn-hero btn-sm">See Live</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+  </body>
 </html>
