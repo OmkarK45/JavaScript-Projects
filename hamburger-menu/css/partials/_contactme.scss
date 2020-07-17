@@ -1,0 +1,20 @@
+/*Color Palettle
+1. #F1F3F5*/
+.section5{
+    display: grid;
+    grid-template-rows: 12rem auto;
+    grid-template-columns: 1fr;
+    background-color: #F1F3F5;
+    background-color: #f0f0f1;
+    height: auto;
+    padding-bottom: 7rem;
+}
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.form-container{
+    background-color: #fff;
+    height: 400px;
+    width: 100%;
+}

@@ -2,7 +2,8 @@
 1. #e7f5ff
 2. #f8f0fc
 3. #fff9db
-4. Text Color == #4e565d*/
+4. Text Color == #4e565d
+5.#f8f0fc*/
 
 .section4{
     display: grid;
@@ -10,6 +11,7 @@
     grid-template-columns: 1fr;
     background-color: #F8F9FA;
     height: auto;
+    padding-bottom: 7rem;
 }
 .works-container{
     color: #4e565d;
@@ -42,4 +44,18 @@
         font-size: 1.5rem;
         text-align: center;
     }
+}
+.bg-color-1{
+    background-color:#e6fcf5; 
+}
+
+.bg-color-1-1{
+    background-color: #daefe9;
+}
+
+.bg-color-2{
+    background-color: #fff9db;
+}
+.bg-color-2-2{
+    background-color: #f2ecd0;
 }
