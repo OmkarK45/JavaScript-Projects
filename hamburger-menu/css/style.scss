@@ -193,6 +193,20 @@ img{
 }
 /*MEDIA QUERY HELL*/
 @media only screen and (max-width: 959px){
+  .section1{
+    width: 90%;
+    margin: 0 auto;
+    .hero-title{
+      font-size: 4.5rem;
+    }
+    .hero-subtitle{
+      font-size: 3rem;
+      // margin: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+    }
+    
+  }
   .section2{
       display: grid;
       grid-template-columns: 1fr;
