@@ -876,4 +876,15 @@ img {
     margin-top: 0;
   }
 }
+
+/*Section 4 Media Queries*/
+@media only screen and (max-width: 959px) {
+  .works-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    margin-top: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
