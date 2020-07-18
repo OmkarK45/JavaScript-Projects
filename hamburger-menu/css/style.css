@@ -140,6 +140,8 @@
           box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
   background-color: #F1F2F5;
   margin: 4rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .card .image-container-card img {
@@ -159,6 +161,25 @@
 
 .card .btn-container-card {
   margin: 2rem auto;
+}
+
+.card .buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .buttons span {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #E8EAEE;
+}
+
+.card .buttons i {
+  font-size: 2.5rem;
 }
 
 /*Section 2 : About Me*/
@@ -219,17 +240,6 @@
   left: -20px;
   border: 3px solid #131231;
   border-radius: 3px;
-  z-index: 500;
-}
-
-.image-container::after {
-  position: absolute;
-  content: "";
-  height: 50px;
-  width: 20px;
-  color: red;
-  right: -20px;
-  bottom: -20px;
   z-index: 500;
 }
 
@@ -402,6 +412,8 @@
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   margin-top: 7rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .form-container {
@@ -542,6 +554,7 @@
   padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  border: 1px solid red;
 }
 
 html {
@@ -779,9 +792,8 @@ img {
 }
 
 /*MEDIA QUERY HELL*/
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 700px) {
   .section1 {
-    width: 90%;
     margin: 0 auto;
   }
   .section1 .hero-title {
@@ -791,6 +803,9 @@ img {
     font-size: 3rem;
     margin-top: 2rem;
     margin-bottom: 5rem;
+  }
+  .section1 .hero-subtitle::before {
+    width: 6rem;
   }
   .section2 {
     display: -ms-grid;
@@ -846,12 +861,15 @@ img {
   }
   .stack-card {
     padding: 1rem;
-    margin: 2rem 1rem;
+    padding-right: 0;
+  }
+  .stack-title {
+    margin: auto 1rem;
   }
 }
 
 /*For Section 3*/
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 700px) {
   .section3 {
     display: -ms-grid;
     display: grid;
@@ -874,17 +892,62 @@ img {
     -ms-grid-columns: none;
         grid-template-columns: none;
     margin-top: 0;
+    width: 100%;
   }
 }
 
 /*Section 4 Media Queries*/
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 700px) {
+  .section4 h1 {
+    margin: 6rem auto;
+  }
+  .section4 .section-title::before {
+    top: 4.5rem;
+    right: 1rem;
+  }
   .works-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: none;
         grid-template-columns: none;
     margin-top: 0;
+    margin-right: auto;
+  }
+  .work-card {
+    margin: 3rem auto;
+  }
+}
+
+/*Section 5 Media Queries*/
+@media only screen and (max-width: 700px) {
+  .section5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .social-media .card {
+    margin: 0 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

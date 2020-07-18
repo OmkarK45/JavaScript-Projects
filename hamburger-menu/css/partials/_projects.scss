@@ -22,6 +22,7 @@
     box-shadow: 0 3px 0 rgba(84,94,111,0.2);
     background-color: #F1F2F5;
     margin: 4rem;
+    transition: all 0.2s ease-in-out;
     .image-container-card{
       img{
         border-radius: 7px;
@@ -38,5 +39,20 @@
     }
     .btn-container-card{
       margin: 2rem auto;
+    }
+    .buttons{
+      width: 100%;
+      display: flex;
+      span{
+        margin: 2rem;
+        padding: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #E8EAEE;
+      }
+      i{
+        font-size: 2.5rem;
+        
+      }
     }
   }

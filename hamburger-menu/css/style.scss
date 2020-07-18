@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  border: 1px solid red;
 }
 html {
   box-sizing: border-box;
@@ -192,20 +193,20 @@ img{
   transition: all 0.2s ease-in-out;
 }
 /*MEDIA QUERY HELL*/
-@media only screen and (max-width: 959px){
+@media only screen and (max-width: 700px){
   .section1{
-    width: 90%;
     margin: 0 auto;
     .hero-title{
       font-size: 4.5rem;
     }
     .hero-subtitle{
       font-size: 3rem;
-      // margin: 2rem;
       margin-top: 2rem;
       margin-bottom: 5rem;
     }
-    
+    .hero-subtitle::before{
+      width: 6rem;
+    }
   }
   .section2{
       display: grid;
@@ -255,11 +256,14 @@ img{
   }
   .stack-card{
     padding: 1rem;
-    margin: 2rem 1rem;
+    padding-right: 0;
+  }
+  .stack-title{
+    margin: auto 1rem;
   }
 }
 /*For Section 3*/
-@media only screen and (max-width: 959px){
+@media only screen and (max-width: 700px){
   .section3{
     display: grid;
     grid-template-columns: 1fr;
@@ -276,16 +280,58 @@ img{
       display: grid;
       grid-template-columns: none;
       margin-top: 0;
+      width: 100%;
     }
   }
 
 }
 /*Section 4 Media Queries*/
-@media only screen and (max-width: 959px){
+@media only screen and (max-width: 700px){
+  .section4 h1{
+    margin: 6rem auto;
+  }
+  .section4{
+    .section-title::before{
+      top: 4.5rem;
+      right: 1rem;
+    }
+  }
   .works-container{
     display: grid;
       grid-template-columns: none;
       margin-top: 0;
+      margin-right: auto;
+      // background-color: red;
+  }
+  .work-card{
+    margin: 3rem auto;
   }
 }
 
+/*Section 5 Media Queries*/ 
+@media only screen and (max-width: 700px){
+ .section5{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .contact-container{
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // margin-top: 7rem; 
+  // margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+}
+.form-container{
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
+.social-media{
+  .card{
+    margin: 0 2rem;
+  }
+}
+}

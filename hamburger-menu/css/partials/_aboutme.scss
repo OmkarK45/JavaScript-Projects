@@ -50,17 +50,6 @@
   border-radius: 3px;
   z-index: 500;
 }
-// BUG ! After is not working
-.image-container::after {
-  position: absolute;
-  content: "";
-  height: 50px;
-  width: 20px;
-  color: red;
-  right: -20px;
-  bottom: -20px;
-  z-index: 500;
-}
 .about-text-container {
   grid-column: 2/3;
   width: 100%;
