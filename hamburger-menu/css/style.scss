@@ -199,8 +199,7 @@ img{
       grid-template-rows: auto;
   }
   .section-title{
-    margin: 3rem auto;
-    margin-bottom: 4rem;
+    margin: 6rem auto;
   }
   .section-title::before{
     bottom: 0px;
@@ -243,6 +242,28 @@ img{
     padding: 1rem;
     margin: 2rem 1rem;
   }
+}
+/*For Section 3*/
+@media only screen and (max-width: 959px){
+  .section3{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    .section-title{
+      grid-column: 1/2;
+      margin: 6rem auto;
+    }
+    .section-title::before{
+      top: 45px;
+
+    }
+    .project-container{
+      display: grid;
+      grid-template-columns: none;
+      margin-top: 0;
+    }
+  }
+
 }
 
 

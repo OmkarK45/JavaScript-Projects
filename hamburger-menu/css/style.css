@@ -789,8 +789,7 @@ img {
         grid-template-rows: auto;
   }
   .section-title {
-    margin: 3rem auto;
-    margin-bottom: 4rem;
+    margin: 6rem auto;
   }
   .section-title::before {
     bottom: 0px;
@@ -835,6 +834,33 @@ img {
   .stack-card {
     padding: 1rem;
     margin: 2rem 1rem;
+  }
+}
+
+/*For Section 3*/
+@media only screen and (max-width: 959px) {
+  .section3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .section3 .section-title {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin: 6rem auto;
+  }
+  .section3 .section-title::before {
+    top: 45px;
+  }
+  .section3 .project-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
