@@ -1,9 +1,11 @@
+@import 'partials/mediaQueries';
 @import 'partials/herosection';
 @import 'partials/projects';
 @import 'partials/aboutme';
 @import 'partials/whatido';
 @import 'partials/contactme';
 @import 'partials/footer';
+
 /*0. Global Styles*/
 *,
 *::before,
@@ -25,6 +27,10 @@ img{
 @font-face {
   font-family: Geomanist;
   src: url('../assets/fonts/geomanist/geomanist-book.woff2') format("woff2");
+}
+@font-face{
+  font-family: Geomanist-light;
+  src: url('../assets/fonts/geomanist/geomanist-light.woff2') format('woff2');
 }
 /* 2. Color Palettle Goes Here*/
 /*Section Background-1 : #F1F2F5
@@ -65,7 +71,7 @@ img{
 
 /*Hamburger Menu*/
 .nav-bar {
-  position: absolute;
+  position: fixed;
   background-color: #122;
   top: 0;
   left: -40rem;
@@ -185,7 +191,59 @@ img{
   color: rgb(182, 170, 170);
   transition: all 0.2s ease-in-out;
 }
-
+/*MEDIA QUERY HELL*/
+@media only screen and (max-width: 959px){
+  .section2{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+  }
+  .section-title{
+    margin: 3rem auto;
+    margin-bottom: 4rem;
+  }
+  .section-title::before{
+    bottom: 0px;
+    right: -5px;
+  }
+  .image-container{
+      margin-top: -1rem;
+      width: 100%;
+      grid-column: 1/3;
+      position: relative;
+      img{
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+      }
+  }
+  .image-container::before{
+    display: none;
+  }
+  .about-text-container{
+    grid-column: 1/3;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .about-text-lead-title {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .about-text-content{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .tech-stack-info{
+    width: 90%;
+    margin: 2rem auto;
+    // background-color: red;
+  }
+  .stack-card{
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+}
 
 
 

@@ -28,18 +28,16 @@
     }
   }
 /*Chevron Animation*/
+.chevron{
+  display: flex;
+}
 .fa-chevron-down {
-    // align-self: flex-end;
-    position: absolute;
-    bottom: 0;
-    left: 49%;
+    margin:  0 auto;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     font-size: 4rem;
-    place-items: center;
     color: white;
     transform-origin: bottom;
-    transform: translateX(-50%);
 }   
 .bounce-3 {
     animation-name: bounce-3;

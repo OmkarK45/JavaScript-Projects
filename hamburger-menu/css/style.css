@@ -1,3 +1,4 @@
+/*Media Queries for Section 2*/
 /*Hero Section Styles*/
 .section1 {
   height: 80vh;
@@ -40,21 +41,22 @@
 }
 
 /*Chevron Animation*/
+.chevron {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .fa-chevron-down {
-  position: absolute;
-  bottom: 0;
-  left: 49%;
+  margin: 0 auto;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   font-size: 4rem;
-  place-items: center;
   color: white;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .bounce-3 {
@@ -161,11 +163,10 @@
 
 /*Section 2 : About Me*/
 .section2 {
-  height: 100vh;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230e7064' fill-opacity='0.3'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  height: auto;
   z-index: 499;
   background-size: 1%;
-  background-color: #F1F2F5;
+  background-color: #f1f2f5;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 12rem auto;
@@ -186,7 +187,7 @@
 
 .section-title::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 5px;
   width: 7rem;
   border-radius: 4px;
@@ -199,7 +200,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  width: 40%;
+  width: 50%;
   margin: 6rem auto;
   position: relative;
 }
@@ -211,7 +212,7 @@
 
 .image-container::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 40px;
   width: 40px;
   top: -20px;
@@ -223,7 +224,7 @@
 
 .image-container::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 50px;
   width: 20px;
   color: red;
@@ -236,7 +237,7 @@
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -244,13 +245,58 @@
 .about-text-lead-title {
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 5rem auto;
+  margin: 3rem auto;
+  margin-top: 5rem;
   text-align: left;
   font-size: 2rem;
 }
 
 .about-text-content {
   font-size: 1.8rem;
+  margin-right: 35%;
+}
+
+/*Tech Stack Styling*/
+.tech-stack-info {
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 65%;
+}
+
+.stack-card {
+  padding: 1.6rem;
+  border-radius: 15px;
+  -webkit-transition: background 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
+          box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
+  margin: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*Stack Images styling*/
+.stack-image i {
+  font-size: 3rem;
+}
+
+.stack-title {
+  font-size: 1.5rem;
+  font-family: 'Geomanist-light',system;
+  margin-bottom: 5px;
+  color: #545e6f;
+  margin: auto 3rem;
+}
+
+.stack-image img {
+  width: 40%;
 }
 
 /*Colors 
@@ -516,6 +562,11 @@ img {
   src: url("../assets/fonts/geomanist/geomanist-book.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: Geomanist-light;
+  src: url("../assets/fonts/geomanist/geomanist-light.woff2") format("woff2");
+}
+
 /* 2. Color Palettle Goes Here*/
 /*Section Background-1 : #F1F2F5
   btn-primary bg = #24b373
@@ -562,7 +613,7 @@ img {
 
 /*Hamburger Menu*/
 .nav-bar {
-  position: absolute;
+  position: fixed;
   background-color: #122;
   top: 0;
   left: -40rem;
@@ -725,5 +776,65 @@ img {
   color: #b6aaaa;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+/*MEDIA QUERY HELL*/
+@media only screen and (max-width: 959px) {
+  .section2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .section-title {
+    margin: 3rem auto;
+    margin-bottom: 4rem;
+  }
+  .section-title::before {
+    bottom: 0px;
+    right: -5px;
+  }
+  .image-container {
+    margin-top: -1rem;
+    width: 100%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    position: relative;
+  }
+  .image-container img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+  .image-container::before {
+    display: none;
+  }
+  .about-text-container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .about-text-lead-title {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .about-text-content {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .tech-stack-info {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .stack-card {
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
