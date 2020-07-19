@@ -1,10 +1,10 @@
-@import 'partials/mediaQueries';
-@import 'partials/herosection';
-@import 'partials/projects';
-@import 'partials/aboutme';
-@import 'partials/whatido';
-@import 'partials/contactme';
-@import 'partials/footer';
+@import "partials/mediaQueries";
+@import "partials/herosection";
+@import "partials/projects";
+@import "partials/aboutme";
+@import "partials/contactme";
+@import "partials/footer";
+@import "partials/whatido";
 
 /*0. Global Styles*/
 *,
@@ -21,43 +21,44 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
-img{
+img {
   width: 100%;
 }
 /*1. Typography*/
 @font-face {
   font-family: Geomanist;
-  src: url('../assets/fonts/geomanist/geomanist-book.woff2') format("woff2");
+  src: url("../assets/fonts/geomanist/geomanist-book.woff2") format("woff2");
 }
-@font-face{
+@font-face {
   font-family: Geomanist-light;
-  src: url('../assets/fonts/geomanist/geomanist-light.woff2') format('woff2');
+  src: url("../assets/fonts/geomanist/geomanist-light.woff2") format("woff2");
 }
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap");
 /* 2. Color Palettle Goes Here*/
 /*Section Background-1 : #F1F2F5
   btn-primary bg = #24b373
 */
 /*3. Buttons Style*/
-.btn{
+.btn {
   padding: 1.3rem 3rem;
   outline: none;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   border: none;
   border-radius: 42px;
   color: white;
-  font-family: 'Geomanist',sans-serif;
+  font-family: "Geomanist", sans-serif;
   font-size: 2rem;
   text-decoration: none;
-} 
-.btn-sm{
+}
+.btn-sm {
   padding: 1rem 2.5rem;
 }
-.btn:hover{
-  transform: translate(0,-2px);
+.btn:hover {
+  transform: translate(0, -2px);
 }
-.btn-hero{
+.btn-hero {
   background: #24b373;
-  box-shadow: inset 0 -2px 0 #1b8958
+  box-shadow: inset 0 -2px 0 #1b8958;
 }
 .container {
   width: 100%;
@@ -129,209 +130,162 @@ img{
   text-align: center;
   padding: 1rem 0;
 }
-.nav-link{
-    color: #fff;
-    font-size: 2.2rem;
-    text-decoration: none;
-    position: relative;
-    padding-bottom: 0.4rem;
+.nav-link {
+  color: #fff;
+  font-size: 2.2rem;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.4rem;
 }
-.nav-link::before{
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
-    transform: scaleX(0);
-    transition: 0.4s ease-in-out;
-    transform-origin: left;
+.nav-link::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: 0.4s ease-in-out;
+  transform-origin: left;
 }
-.nav-link:hover::before{
-    transform: scaleX(1);
+.nav-link:hover::before {
+  transform: scaleX(1);
 }
-.nav-desktop{
+.nav-desktop {
   display: none;
 }
-@media(min-width:1000px){
-  .nav-bar{
+@media (min-width: 1000px) {
+  .nav-bar {
     display: none;
     pointer-events: none;
-    
   }
-  .nav-desktop{
+  .nav-desktop {
     display: flex;
     justify-content: space-between;
     padding: 3rem 9rem;
     color: white;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
-
   }
-  .logo{
+  .logo {
     font-size: 2rem;
-    font-family: 'Geomanist', sans-serif;
+    font-family: "Geomanist", sans-serif;
   }
-  .nav-list-desktop{
+  .nav-list-desktop {
     display: flex;
     list-style: none;
     font-size: 1.6rem;
-    font-family: 'Geomanist',sans-serif;
+    font-family: "Geomanist", sans-serif;
     align-items: center;
   }
-  .nav-list-item-desktop a{
+  .nav-list-item-desktop a {
     text-decoration: none;
     color: inherit;
   }
-  .nav-list-item-desktop{
+  .nav-list-item-desktop {
     margin: 0 4rem;
   }
 }
 /*Navbar Desktop Animation*/
-.nav-list-item-desktop:hover{
+.nav-list-item-desktop:hover {
   color: rgb(182, 170, 170);
   transition: all 0.2s ease-in-out;
 }
 /*MEDIA QUERY HELL*/
-@media only screen and (max-width: 700px){
-  .section1{
+@media only screen and (max-width: 700px) {
+  .section1 {
     margin: 0 auto;
-    .hero-title{
+    .hero-title {
       font-size: 4.5rem;
     }
-    .hero-subtitle{
+    .hero-subtitle {
       font-size: 3rem;
       margin-top: 2rem;
       margin-bottom: 5rem;
     }
-    .hero-subtitle::before{
+    .hero-subtitle::before {
       width: 6rem;
     }
   }
-  .section2{
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
+  .section-2 {
+    display: flex;
+    flex-direction: column;
   }
-  .section-title{
+  .section-title {
     margin: 6rem auto;
   }
-  .section-title::before{
+  .section-title::before {
     bottom: 0px;
     right: -5px;
   }
-  .image-container{
-      margin-top: -1rem;
-      width: 100%;
-      grid-column: 1/3;
-      position: relative;
-      img{
-        width: 60%;
-        display: block;
-        margin: 0 auto;
-      }
-  }
-  .image-container::before{
-    display: none;
-  }
-  .about-text-container{
-    grid-column: 1/3;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .about-text-lead-title {
-    width: 80%;
-    text-align: center;
-    margin: 2rem auto;
-  }
-  .about-text-content{
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .tech-stack-info{
-    width: 90%;
-    margin: 2rem auto;
-    // background-color: red;
-  }
-  .stack-card{
-    padding: 1rem;
-    padding-right: 0;
-  }
-  .stack-title{
-    margin: auto 1rem;
-  }
 }
 /*For Section 3*/
-@media only screen and (max-width: 700px){
-  .section3{
+@media only screen and (max-width: 700px) {
+  .section3 {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
-    .section-title{
+    .section-title {
       grid-column: 1/2;
       margin: 6rem auto;
     }
-    .section-title::before{
+    .section-title::before {
       top: 45px;
-
     }
-    .project-container{
+    .project-container {
       display: grid;
       grid-template-columns: none;
       margin-top: 0;
       width: 100%;
     }
   }
-
 }
 /*Section 4 Media Queries*/
-@media only screen and (max-width: 700px){
-  .section4 h1{
+@media only screen and (max-width: 700px) {
+  .section4 h1 {
     margin: 6rem auto;
   }
-  .section4{
-    .section-title::before{
+  .section4 {
+    .section-title::before {
       top: 4.5rem;
       right: 1rem;
     }
   }
-  .works-container{
+  .works-container {
     display: grid;
-      grid-template-columns: none;
-      margin-top: 0;
-      margin-right: auto;
-      // background-color: red;
+    grid-template-columns: none;
+    margin-top: 0;
+    margin-right: auto;
+    // background-color: red;
   }
-  .work-card{
+  .work-card {
     margin: 3rem auto;
   }
 }
 
-/*Section 5 Media Queries*/ 
-@media only screen and (max-width: 700px){
- .section5{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- }
- .contact-container{
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // margin-top: 7rem; 
-  // margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-
-}
-.form-container{
- width: 100%;
- margin: 0;
- padding: 0;
-}
-.social-media{
-  .card{
-    margin: 0 2rem;
+/*Section 5 Media Queries*/
+@media only screen and (max-width: 700px) {
+  .section5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
+  .contact-container {
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // margin-top: 7rem;
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .social-media {
+    .card {
+      margin: 0 2rem;
+    }
+  }
 }

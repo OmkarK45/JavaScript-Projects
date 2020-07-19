@@ -9,7 +9,11 @@
     display: grid;
     grid-template-rows: 12rem auto;
     grid-template-columns: 1fr;
-    background-color: #F8F9FA;
+    // background: url(../../../hamburger-menu/assets/img/color-shape.png);
+    background: url(../../hamburger-menu/assets/img/3.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
     height: auto;
     padding-bottom: 7rem;
 }
