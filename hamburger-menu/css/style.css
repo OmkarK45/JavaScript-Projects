@@ -184,6 +184,7 @@
 }
 
 /*Section 2 : About Me*/
+/*Color #131231*/
 .section-2 {
   background: url(../../../hamburger-menu/assets/img/color-shape.png);
   height: auto;
@@ -208,10 +209,19 @@
   display: grid;
   -ms-grid-columns: 0.4fr 0.6fr;
       grid-template-columns: 0.4fr 0.6fr;
+  padding: 2rem;
 }
 
 .section-2 .box-image {
-  background-color: lightcyan;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .section-2 .box-image img {
@@ -221,9 +231,29 @@
   margin: 3rem auto;
 }
 
+.section-2 .box-text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
 .section-2 .box-text .text-content-about {
-  color: #737C8A;
+  color: #737c8a;
   font-size: 2rem;
+}
+
+.section-2 .box-text .text-content-about p {
+  padding: 3rem;
+}
+
+.section-2 .button-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 3rem;
 }
 
 .about-heading-row {
@@ -231,15 +261,22 @@
 }
 
 .about-heading-row h1 {
-  font-family: 'Herr Von Muellerhoff', cursive;
+  font-family: "Herr Von Muellerhoff", cursive;
   font-size: 8rem;
-  color: #545E6F;
+  color: #545e6f;
 }
 
 .about-heading-row .quote {
   font-size: 5rem;
   margin-right: 4rem;
   margin-left: 3rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .about-heading-row .quote {
+    margin: 0;
+    margin-right: 2rem;
+  }
 }
 
 /*Color Palettle
@@ -387,12 +424,14 @@
 .footer-container {
   text-align: center;
   padding: 3rem;
+  background: url(../../../hamburger-menu/assets/img/1.png);
   background-color: #131231;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.footer-container p, .footer-container i {
+.footer-container p,
+.footer-container i {
   color: white;
   font-size: 1.7rem;
 }
@@ -414,6 +453,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  background-color: #fff;
   height: auto;
   padding-bottom: 7rem;
 }
@@ -431,10 +471,10 @@
 }
 
 .works-container:hover {
-  -webkit-transition: -webkit-transform .2s ease-in-out;
-  transition: -webkit-transform .2s ease-in-out;
-  transition: transform .2s ease-in-out;
-  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 .icon-holder i {
@@ -743,20 +783,35 @@ img {
     width: 6rem;
   }
   .section-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 8rem;
+  }
+  .section-2 .about-heading-text {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .section-2 .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    padding-bottom: 0;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
+  .section-2 .card .button-row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
   }
   .section-title {
     margin: 6rem auto;
-  }
-  .section-title::before {
-    bottom: 0px;
-    right: -5px;
   }
 }
 
