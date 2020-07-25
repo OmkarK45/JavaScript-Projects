@@ -4,13 +4,12 @@
   // background: url(../../../hamburger-menu/assets/img/color-shape.png);
   background-color: #F1F2F5;
   height: auto;
+  padding-bottom: 2rem;
 }
-.section-title {
-  grid-column: 1/3;
+.section-title-about{
   text-align: center;
-  margin: 6rem auto;
+  padding: 5rem;
   font-size: 4rem;
-  position: relative;
 }
 .section-2 {
   .card {
@@ -30,14 +29,15 @@
     flex: 1;
     img {
       width: 60%;
-      border-radius: 50%;
+      border-radius: 15px;
       display: block;
       margin: 3rem auto;
     }
   }
   .box-text {
     flex: 2;
-    // background-color: lightcoral;
+    line-height: 1.7;
+    background-color: lightcoral;
     .text-content-about {
       color: #737c8a;
       font-size: 2rem;
@@ -49,28 +49,17 @@
   .button-row {
     // background-color: cyan;
     display: flex;
-    justify-content: flex-start;
-    margin-left: 3rem;
+    justify-content: center;
+    
   }
 }
 .about-heading-row {
   height: 8rem;
-  // background-color: lightgreen;
+  background-color: lightgreen;
   h1 {
-    font-family: "Herr Von Muellerhoff", cursive;
-    font-size: 8rem;
-    color: #545e6f;
-    // text-align: center;
-  }
-  .quote {
+    font-family: 'Geomanist',sans-serif;
     font-size: 5rem;
-    margin-right: 4rem;
-    margin-left: 3rem;
-  }
-  @media only screen and (max-width: 700px){
-    .quote{
-      margin: 0;
-      margin-right: 2rem;
-    }
+    color: #545e6f;
+    text-align: center;
   }
 }

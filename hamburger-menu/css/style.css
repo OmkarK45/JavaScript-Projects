@@ -228,13 +228,6 @@
 
 /*Section 3 : Projects*/
 .section3 {
-  display: -ms-grid;
-  display: grid;
-  height: auto;
-  -ms-grid-rows: 12rem auto;
-      grid-template-rows: 12rem auto;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
   background-color: #E8EAEE;
 }
 
@@ -309,16 +302,13 @@
 .section-2 {
   background-color: #F1F2F5;
   height: auto;
+  padding-bottom: 2rem;
 }
 
-.section-title {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/3;
+.section-title-about {
   text-align: center;
-  margin: 6rem auto;
+  padding: 5rem;
   font-size: 4rem;
-  position: relative;
 }
 
 .section-2 .card {
@@ -347,7 +337,7 @@
 
 .section-2 .box-image img {
   width: 60%;
-  border-radius: 50%;
+  border-radius: 15px;
   display: block;
   margin: 3rem auto;
 }
@@ -356,6 +346,8 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  line-height: 1.7;
+  background-color: lightcoral;
 }
 
 .section-2 .box-text .text-content-about {
@@ -371,44 +363,26 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-left: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about-heading-row {
   height: 8rem;
+  background-color: lightgreen;
 }
 
 .about-heading-row h1 {
-  font-family: "Herr Von Muellerhoff", cursive;
-  font-size: 8rem;
-  color: #545e6f;
-}
-
-.about-heading-row .quote {
+  font-family: 'Geomanist',sans-serif;
   font-size: 5rem;
-  margin-right: 4rem;
-  margin-left: 3rem;
-}
-
-@media only screen and (max-width: 700px) {
-  .about-heading-row .quote {
-    margin: 0;
-    margin-right: 2rem;
-  }
+  color: #545e6f;
+  text-align: center;
 }
 
 /*Color Palettle
 1. #F1F3F5*/
 .section5 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 12rem auto;
-      grid-template-rows: 12rem auto;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
   background-color: #F1F3F5;
   background-color: #f0f0f1;
   height: auto;
@@ -564,12 +538,6 @@
 4. Text Color == #4e565d
 5.#f8f0fc*/
 .section4 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 12rem auto;
-      grid-template-rows: 12rem auto;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
   background: url(../../hamburger-menu/assets/img/3.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -651,6 +619,7 @@
   padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  border: 1px solid red;
 }
 
 html {
