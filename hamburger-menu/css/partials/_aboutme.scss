@@ -2,7 +2,7 @@
 /*Color #131231*/
 .section-2 {
   // background: url(../../../hamburger-menu/assets/img/color-shape.png);
-  background-color: #F1F2F5;
+  background-color: white;
   height: auto;
   padding-bottom: 2rem;
 }
@@ -13,7 +13,6 @@
 }
 .section-2 {
   .card {
-    height: 100%;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -23,7 +22,6 @@
   }
 
   .box-image {
-    // background-color: lightcyan;
     display: flex;
     align-items: center;
     flex: 1;
@@ -37,7 +35,6 @@
   .box-text {
     flex: 2;
     line-height: 1.7;
-    background-color: lightcoral;
     .text-content-about {
       color: #737c8a;
       font-size: 2rem;
@@ -47,19 +44,45 @@
     }
   }
   .button-row {
-    // background-color: cyan;
     display: flex;
     justify-content: center;
-    
+    padding: 2rem;
+    .btn{
+      padding: 0.8rem 3rem;
+    }
   }
 }
 .about-heading-row {
-  height: 8rem;
-  background-color: lightgreen;
   h1 {
     font-family: 'Geomanist',sans-serif;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #545e6f;
     text-align: center;
+  }
+}
+.tech-stacks{
+  margin: 1rem 0;
+}
+.tech-stacks ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: auto;
+}
+.tech-stacks ul li{
+  display: block;
+  // color: white;
+  color: black;
+  font-size: 1.3rem;
+  // background-color:#151433;
+  background-color: #d6d6d6;
+  margin: 0.3rem auto;
+  padding: 0.3rem 1.4rem;
+  border-radius: 12px;
+  img{
+    width: 1.3rem;
+    display:inline-block;
+    background-color: white;
   }
 }

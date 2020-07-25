@@ -13,8 +13,8 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-  border: 1px solid red;
+  box-sizing: border-box;
+  // border: 1px solid red;
 }
 html {
   box-sizing: border-box;
@@ -24,6 +24,9 @@ html {
 }
 img {
   width: 100%;
+}
+li{
+  list-style: none;
 }
 /*1. Typography*/
 @font-face {
@@ -218,6 +221,7 @@ img {
       padding: 0;
     }
     .card{
+      width: 100%;
       display: flex;
       padding-bottom: 0;
       text-align: center;
@@ -229,9 +233,6 @@ img {
         padding: 0;
       }
     }
-  }
-  .section-title {
-    margin: 6rem auto;
   }
 }
 /*For Section 3*/
