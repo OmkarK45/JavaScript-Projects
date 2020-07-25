@@ -307,7 +307,7 @@
 /*Section 2 : About Me*/
 /*Color #131231*/
 .section-2 {
-  background: url(../../../hamburger-menu/assets/img/color-shape.png);
+  background-color: #F1F2F5;
   height: auto;
 }
 
@@ -882,7 +882,7 @@ img {
 
 /*Navbar Desktop Animation*/
 .nav-list-item-desktop:hover {
-  color: #b6aaaa;
+  color: #24b373;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
