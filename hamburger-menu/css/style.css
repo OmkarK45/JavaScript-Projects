@@ -385,9 +385,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 95%;
@@ -932,6 +929,9 @@ li {
             justify-content: center;
     margin: 0;
     padding: 0;
+  }
+  .section-2 .tech-stacks {
+    display: block;
   }
 }
 
