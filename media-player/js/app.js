@@ -7,7 +7,8 @@ const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 const progressContainer = document.getElementById("progress-container");
 const progress = document.getElementById("progress");
-const currentTimeEl = doc
+const currentTimeElement = document.getElementById('current-time');
+const durationElement = document.getElementById('duration');
 // Music
 const songs = [
   {
@@ -79,7 +80,6 @@ function nextSong() {
   if (songIndex > songs.length - 1) {
     songIndex = 0;
   }
-  console.log(songIndex);
   loadSong(songs[songIndex]);
   playSong();
 }
@@ -95,12 +95,37 @@ function updateProgressBar(event) {
     // Update progress bar width
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
+    // Calculate display for duration
+    const durationMinutes =Math.floor(duration / 60) ;
+    let durationSeconds = Math.floor(duration%60);
+    if(durationSeconds<10){
+      durationSeconds=`0${durationSeconds}`;
+    }
+    
+    // Delay switching duration element to avoid not a number 
+    if(durationSeconds){
+      durationElement.textContent = `${durationMinutes}:${durationSeconds}`;
+    }
+     // Calculate display for current time
+     const currentMinutes =Math.floor(currentTime / 60) ;
+     let currentSeconds = Math.floor(currentTime%60);
+     if(currentSeconds<10){
+       currentSeconds=`0${currentSeconds}`;
+     }
+     currentTimeElement.textContent = `${currentMinutes}:${currentSeconds}`
   }
+}
+function setProgressBar(event){
+  const width = this.clientWidth;
+  const clickX = event.offsetX;
+  const {duration} = music;
+  music.currentTime = (clickX/width)*duration;
 }
 // Event Listener for forwards and backward
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
-
+progressContainer.addEventListener('click',setProgressBar);
+music.addEventListener('ended', nextSong);
 // Make BG React to Album art colors
 // Event
 music.addEventListener("timeupdate", updateProgressBar);
