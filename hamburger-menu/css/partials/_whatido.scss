@@ -26,6 +26,7 @@
 .works-container:hover {
   transition: transform 0.2s ease-in-out;
 }
+
 .icon-holder i {
   font-size: 3rem;
   margin: 2rem 0;
@@ -42,7 +43,10 @@
 }
 .tech-stack {
   background-color: #dbe9f2;
-
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   p {
     padding: 2rem;
     font-size: 1.5rem;

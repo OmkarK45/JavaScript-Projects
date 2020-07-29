@@ -64,23 +64,31 @@
 .social-media-container{
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;   
     margin-top: 7rem;
     h1{
         font-size: 1.9rem;
         margin: 2rem 0;
     }
 }
+.social-image{
+    img{
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
 .social-media{
     display: flex;
+    margin: auto;
     .card{
         margin: 0 3rem;
-        padding: 1rem;
+        padding: 2rem;
         cursor: pointer;
         transition: transform .2s ease-in-out;
         // background-color: #C13584;
         i{
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: white;
         }
         

@@ -300,8 +300,15 @@ li{
     padding: 0;
   }
   .social-media {
+    margin-top: 3rem;
     .card {
       margin: 0 2rem;
+      padding: 1rem;
+    }
+  }
+  .social-image{
+    img{
+      width: 75%;
     }
   }
 }
