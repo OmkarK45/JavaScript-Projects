@@ -7,23 +7,31 @@ wordsArr = words.split(" ");
 console.log(wordsArr);
 let randomIndex = 0;
 
+// notification
+const notificationElement = document.querySelector('.notification');
+
+
+// Buttons
+const startBtn = document.querySelector('.startBtn');
+
 // Scores 
 const currentScoreElement  = document.querySelector('.score');
+const highScoreElement = document.querySelector('.highScore');
 let score = 0;
-
+let highScore = 0;
 function myFunction(event){
     var x = event.which || event.keyCode;
     // console.log(x);
     if(x==32){
         document.body.onkeyup = function(e){
-            if(e.keyCode == 32){
+            if(e.keyCode == 32 && !isMisspelled){
+                
                 randomIndex = Math.floor(Math.random()*wordsArr.length);
-                // console.log(randomIndex);
-                // console.log(textTyped.value);
                 nextWord = wordsArr[randomIndex];
                 word.innerHTML =`${nextWord}`;
-                
+                console.log(isMisspelled);
                 textTyped.value = '';
+                
             }
         }
     }
@@ -42,17 +50,46 @@ function submitOnSpace(event){
 }
 textTyped.addEventListener("keypress", submitOnSpace);
 
+let isMisspelled = false;
 // Function to update score : 
 function scoreKeeper(string1, string2){
     if(string1 == string2){
         score = score+1;
         console.log('words match');
+        isMisspelled = false;
         currentScoreElement.textContent = `${score}`;
+        notificationElement.innerHTML = '';
     }
     else{
         console.log('words do not match');
+        // Show notification
+        isMisspelled = true;
+        notificationElement.innerHTML = `<i class="fal fa-exclamation-triangle"></i> Try again.`;
+    }
+    
+}
+    
+// Reset Game board
+function resetGame(){
+    highScoreKeeper(score);
+    score = 0;
+    currentScoreElement.textContent = '';
+}
+// For highscore -- apply if else loop ! 
+function highScoreKeeper(scoreValue){
+    if(scoreValue>highScore){
+        highScore = scoreValue;
+        highScoreElement.textContent = `${highScore}`;
     }
 }
+// Event listener on start button 
+startBtn.addEventListener('click', function(){
+    resetGame();
+});
+
+
+
+
 
 // Hmm logic ;; add event listener on space key
 // for every correct word user types, increment score by one 
