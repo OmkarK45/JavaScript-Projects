@@ -269,4 +269,18 @@ textarea {
 .btn-danger {
   background-color: var(--danger);
 }
+
+.notification {
+  color: var(--red);
+}
+
+footer {
+  color: var(--lightGrey);
+  color: var(--black);
+  text-align: center;
+}
+
+footer h5 {
+  margin: 0;
+}
 /*# sourceMappingURL=main.css.map */

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>TypeR | Find your typing speed.</title>
 </head>
-<body>
+<body onkeypress="myFunction(event)">
     <!-- Title of Project -->
     <header>
         <nav>
@@ -19,7 +19,7 @@
     <!-- Paragraph Box -->
     <div class="text-box">
         <h3>Type this ! <span>Press space to start</span>  </h3>
-       <p><span class="notification"></span></p> 
+        <p class="notificationParent"><span class="notification"></span></p> 
         <p class="word"></p>
     </div>
     <div class="container">
@@ -29,7 +29,7 @@
     </div>
     <div class="text-area">
         <form action="">
-            <textarea  name="" class="textarea" cols="70" onkeypress="myFunction(event)"></textarea>
+            <textarea  name="" class="textarea" cols="70" "></textarea>
         </form>
         
     </div>
@@ -40,7 +40,11 @@
 
 
 
-
+    <footer>
+       <div class="footer-container">
+           <h5>Made with <i class="fa fa-heart" style="color: red;"></i> by Omkar Kulkarni</h5>
+       </div>
+    </footer>
     <!-- Driver Code ! -->
     <script src="js/engine.js"></script>
 </body>

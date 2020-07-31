@@ -24,8 +24,8 @@ function myFunction(event){
     // console.log(x);
     if(x==32){
         document.body.onkeyup = function(e){
-            if(e.keyCode == 32 && !isMisspelled){
-                
+            if((e.keyCode == 32||e.keyCode==13) && !isMisspelled){
+                textTyped.focus();
                 randomIndex = Math.floor(Math.random()*wordsArr.length);
                 nextWord = wordsArr[randomIndex];
                 word.innerHTML =`${nextWord}`;
@@ -40,7 +40,7 @@ function myFunction(event){
 
 // After pressing space -- form should submit 
 function submitOnSpace(event){
-    if(event.which === 32){
+    if(event.which === 32 || event.which === 13){
         event.target.form.dispatchEvent(new Event("submit", {cancelable: true}));
         event.preventDefault();
         // console.log('word submitted');
@@ -53,7 +53,8 @@ textTyped.addEventListener("keypress", submitOnSpace);
 let isMisspelled = false;
 // Function to update score : 
 function scoreKeeper(string1, string2){
-    if(string1 == string2){
+    console.log(string1);
+    if(string1 === string2){
         score = score+1;
         console.log('words match');
         isMisspelled = false;
