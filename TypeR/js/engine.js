@@ -1,27 +1,25 @@
+// DOM SELECTION
 let textTyped = document.querySelector('.textarea');
 let word = document.querySelector('.word');
+const notificationElement = document.querySelector('.notification');
+const startBtn = document.querySelector('.startBtn');
+const currentScoreElement  = document.querySelector('.score');
+const highScoreElement = document.querySelector('.highScore');
+
+// WORDS COLLECTION FOR THE TEST
 let nextWord = '';
 var words = "greet campaign coffee care revise ridge pilot full prison wrestle account dictionary start giant fast monarch patrol bear motif detective trouser title act speaker pursuit penny appear ballet agreement welcome similar sensation strong fog limited implicit nursery neighborhood infinite refund double achievement ample socialist intensify nomination visit drag retiree mislead situation credit oil clarify conscience war sow suitcase fixture worth fuss remain moment frighten spider breathe install interactive allow deadly cabin restless service rise integrity artist short circuit perception listen arrangement patience creep landscape stain citizen microphone nose bullet view category reign horizon news social reliable passion stroll constitutional adult city";
 let wordsArr = [];
 wordsArr = words.split(" ");
-console.log(wordsArr);
+
+// VARIABLES USED
 let randomIndex = 0;
-
-// notification
-const notificationElement = document.querySelector('.notification');
-
-
-// Buttons
-const startBtn = document.querySelector('.startBtn');
-
-// Scores 
-const currentScoreElement  = document.querySelector('.score');
-const highScoreElement = document.querySelector('.highScore');
 let score = 0;
 let highScore = 0;
+
+// MAIN DRIVER FUNCTION
 function myFunction(event){
     var x = event.which || event.keyCode;
-    // console.log(x);
     if(x==32){
         document.body.onkeyup = function(e){
             if((e.keyCode == 32||e.keyCode==13) && !isMisspelled){
@@ -76,7 +74,7 @@ function resetGame(){
     score = 0;
     currentScoreElement.textContent = '';
 }
-// For highscore -- apply if else loop ! 
+// For highscore logic -- apply if else loop ! 
 function highScoreKeeper(scoreValue){
     if(scoreValue>highScore){
         highScore = scoreValue;
@@ -92,6 +90,9 @@ startBtn.addEventListener('click', function(){
 
 
 
-// Hmm logic ;; add event listener on space key
-// for every correct word user types, increment score by one 
-// after user press space key, load next key
+// Hmm logic ;; add event listener on space key  -- done 
+// for every correct word user types, increment score by one -- done  
+// after user press space key, load next key -- done 
+// TODO 1. Implement a timer countdown in container
+// When user beats highscore, load congratulation game after countdown ends !
+// Words per minute ! 
