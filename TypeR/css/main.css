@@ -292,4 +292,104 @@ footer {
 footer h5 {
   margin: 0;
 }
+
+/* The Modal (background) */
+.modal {
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  margin: 10% auto;
+  /* 15% from the top and centered */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.social-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-buttons li {
+  border-radius: 10px;
+  -webkit-box-shadow: var(--level-3);
+          box-shadow: var(--level-3);
+  margin: 0 1rem;
+  padding: 0.6rem 0.9rem;
+}
+
+.social-buttons li a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-buttons .twitter {
+  background-color: #1DA1F2;
+}
+
+.social-buttons .fb {
+  background-color: #4267B2;
+}
+
+.social-buttons .ig {
+  background-color: #C13584;
+}
+
+.social-share {
+  text-align: center;
+}
+
+.close {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
 /*# sourceMappingURL=main.css.map */

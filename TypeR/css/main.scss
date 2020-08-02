@@ -235,3 +235,76 @@ footer{
         margin: 0;
     }
 }
+// CSS for modal
+/* The Modal (background) */
+.modal {
+    // display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+      display: flex;
+      flex-direction: column;
+    align-items: center;
+      background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    margin: 10% auto; /* 15% from the top and centered */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .social-buttons{
+      display: flex;
+      justify-content: space-between;
+      li{
+          border-radius: 10px;
+          box-shadow: var(--level-3);
+          margin: 0 1rem;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        padding: 0.6rem 0.9rem;
+       
+      }
+      .twitter{
+        background-color: #1DA1F2;
+        }
+        .fb{
+            background-color: #4267B2;
+        }
+        .ig{
+            background-color: #C13584;
+        }
+  }
+  .social-share{
+      text-align: center;
+  }
+  .close{
+      align-self: flex-end;
+  }
