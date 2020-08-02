@@ -266,8 +266,17 @@ textarea {
   font-weight: 500;
 }
 
+.buttons .startBtn {
+  color: black;
+}
+
 .btn-danger {
   background-color: var(--danger);
+}
+
+.btn-yellow {
+  background-color: var(--yellow);
+  color: black;
 }
 
 .notification {

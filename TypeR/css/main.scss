@@ -213,9 +213,16 @@ textarea{
         font-family: "Gotham Pro",system;
         font-weight: 500;
     }
+    .startBtn{
+        color: black;
+    }
 }
 .btn-danger{
     background-color: var(--danger);
+}
+.btn-yellow{
+    background-color: var(--yellow);
+    color: black;
 }
 .notification{
     color: var(--red);

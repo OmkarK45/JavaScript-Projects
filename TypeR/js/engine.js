@@ -16,7 +16,6 @@ wordsArr = words.split(" ");
 let randomIndex = 0;
 let score = 0;
 let highScore = 0;
-
 // MAIN DRIVER FUNCTION
 function myFunction(event){
     var x = event.which || event.keyCode;
@@ -29,7 +28,6 @@ function myFunction(event){
                 word.innerHTML =`${nextWord}`;
                 console.log(isMisspelled);
                 textTyped.value = '';
-                
             }
         }
     }
@@ -83,11 +81,27 @@ function highScoreKeeper(scoreValue){
 }
 // Event listener on start button 
 startBtn.addEventListener('click', function(){
+    countdown();
     resetGame();
 });
 
-
-
+// Timer Functionality
+function countdown() {
+    var seconds = 60;
+    function tick() {
+        var counter = document.getElementById("counter");
+        seconds--;
+        counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            setTimeout(tick, 1000);
+        } else {
+            let wpm=0;
+            wpm = Math.floor((score/60)*100);
+            alert(`Your score is ${wpm}`);
+        }
+    }
+    tick();
+}
 
 
 // Hmm logic ;; add event listener on space key  -- done 
