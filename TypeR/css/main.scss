@@ -58,6 +58,7 @@ html{
 body{
     font-family: var(--bodyFont);
     background: var(--background);
+    // background: #f3f3f3; 
     color: var(--textColor);
 }
 
@@ -238,7 +239,7 @@ footer{
 // CSS for modal
 /* The Modal (background) */
 .modal {
-    // display: none; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;

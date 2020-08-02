@@ -5,7 +5,7 @@ const notificationElement = document.querySelector('.notification');
 const startBtn = document.querySelector('.startBtn');
 const currentScoreElement  = document.querySelector('.score');
 const highScoreElement = document.querySelector('.highScore');
-
+const speedWPMElement = document.querySelector('.speed');
 // WORDS COLLECTION FOR THE TEST
 let nextWord = '';
 var words = "greet campaign coffee care revise ridge pilot full prison wrestle account dictionary start giant fast monarch patrol bear motif detective trouser title act speaker pursuit penny appear ballet agreement welcome similar sensation strong fog limited implicit nursery neighborhood infinite refund double achievement ample socialist intensify nomination visit drag retiree mislead situation credit oil clarify conscience war sow suitcase fixture worth fuss remain moment frighten spider breathe install interactive allow deadly cabin restless service rise integrity artist short circuit perception listen arrangement patience creep landscape stain citizen microphone nose bullet view category reign horizon news social reliable passion stroll constitutional adult city";
@@ -102,9 +102,10 @@ function countdown() {
             setTimeout(tick, 1000);
         } else {
             let wpm=0;
-            wpm = Math.floor((score/60)*100);
-            alert(`Your score is ${wpm}`);
+            wpm = Math.floor((score/60)*100); 
             timerStarted = false;
+            speedWPMElement.textContent = `${wpm}`;
+            modal.style.display = "block";
         }
     }
     tick();
