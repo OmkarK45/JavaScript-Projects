@@ -113,7 +113,7 @@ function countdown() {
             timerStarted = false;
             speedWPMElement.textContent = `${wpm}`;
             modal.style.display = "block";
-            
+            socialShare(wpm);
               
         }
     }
@@ -158,6 +158,21 @@ window.onclick = function(event) {
 
 
 */
+// Social Media API
+const tweet = document.querySelector('.tweet');
+const twitterButton = document.querySelector('.twitter');
+function socialShare(s){
+    console.log(s);
+
+    twitterButton.addEventListener('click',function(){
+        sharingText = {
+            'score' : `${s}`,
+            'text' : `I scored in TypeR test ! Check out typer and test your typing speed !`
+        }
+        tweet.setAttribute('href', `https://twitter.com/intent/tweet?text=Check%20out%20TypeR%20!%20My%20typing%20speed%20is%20${sharingText.score}WPM.`);
+    })
+}
+socialShare();
 
 
 
