@@ -13,41 +13,44 @@
 
 :root {
   /* Define Colors as colors */
-  --green:#00ebc7;
-  --red:#ff5470;
-  --yellow:#fde24f;
-  --black:#1b2d45;
-  --darkBlue:#00214d;
-  --grey:#bfbfbf;
-  --lightGrey:#f2f4f6;
-  --white:#fff;
+  --green: #00ebc7;
+  --red: #ff5470;
+  --yellow: #fde24f;
+  --black: #1b2d45;
+  --darkBlue: #00214d;
+  --grey: #bfbfbf;
+  --lightGrey: #f2f4f6;
+  --white: #fff;
   /* Define Colors as intensions */
-  --primary:var(--green);
-  --danger:var(--red);
-  --background:var(--lightGrey);
-  --textColor:var(--black);
-  --lineColor:var(--grey);
-  --cardBg:var(--white);
+  --primary: var(--green);
+  --danger: var(--red);
+  --background: var(--lightGrey);
+  --textColor: var(--black);
+  --lineColor: var(--grey);
+  --cardBg: var(--white);
   /* Styles */
-  --line:solid 1px var(--lineColor);
+  --line: solid 1px var(--lineColor);
   /* Type */
-  --headingFont:"Space Mono",monospace;
-  --bodyFont:"Work Sans", sans-serif;
-  --baseFontSize:100%;
-  --h1:3.052em;
-  --h2:2.441em;
-  --h3:1.953em;
-  --h4:1.563em;
-  --h5:1.25em;
-  --smallText:0.8em;
+  --headingFont: "Space Mono", monospace;
+  --bodyFont: "Work Sans", sans-serif;
+  --baseFontSize: 100%;
+  --h1: 3.052em;
+  --h2: 2.441em;
+  --h3: 1.953em;
+  --h4: 1.563em;
+  --h5: 1.25em;
+  --smallText: 0.8em;
   /* Elevation */
   --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --level-4:0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* Positioning  */
-  --containerPadding:2.5%;
-  --headerHeight:3rem;
+  --containerPadding: 2.5%;
+  --headerHeight: 3rem;
 }
 
 html {
@@ -106,7 +109,8 @@ a {
   text-decoration: none;
 }
 
-p a, blockquote a {
+p a,
+blockquote a {
   color: var(--black);
   text-decoration: none;
   background: var(--cardBg);
@@ -115,7 +119,7 @@ p a, blockquote a {
 
 /* End TypeScale */
 button {
-  --buttonColor:var(--primary);
+  --buttonColor: var(--primary);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -153,7 +157,7 @@ header {
 }
 
 header nav {
-  font-family: "Gotham Pro",system;
+  font-family: "Gotham Pro", system;
   font-weight: bold;
   font-size: 2.5rem;
 }
@@ -182,13 +186,13 @@ li {
   margin: 3rem auto;
   margin-bottom: 0;
   padding: 2rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   border-radius: 20px;
 }
 
 .text-box h3 {
   margin: 0;
-  font-family: 'Gotham Pro', system;
+  font-family: "Gotham Pro", system;
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -218,7 +222,7 @@ li {
 
 .container p {
   font-size: var(--h4);
-  font-family: 'Gotham Pro', system;
+  font-family: "Gotham Pro", system;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -262,7 +266,7 @@ textarea {
   margin-right: 0.5rem;
   color: white;
   font-size: var(--h4);
-  font-family: "Gotham Pro",system;
+  font-family: "Gotham Pro", system;
   font-weight: 500;
 }
 
@@ -327,6 +331,9 @@ footer h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #fefefe;
   padding: 20px;
   border-radius: 10px;
@@ -366,7 +373,6 @@ footer h5 {
 /* The Close Button */
 .close {
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
 }
@@ -401,15 +407,19 @@ footer h5 {
 }
 
 .social-buttons .twitter {
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
 }
 
 .social-buttons .fb {
-  background-color: #4267B2;
+  background-color: #4267b2;
 }
 
 .social-buttons .ig {
-  background-color: #C13584;
+  background-color: #c13584;
+}
+
+.social-buttons .replay {
+  background-color: var(--yellow);
 }
 
 .social-share {
@@ -419,5 +429,6 @@ footer h5 {
 .close {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */

@@ -6,6 +6,7 @@ const startBtn = document.querySelector('.startBtn');
 const currentScoreElement  = document.querySelector('.score');
 const highScoreElement = document.querySelector('.highScore');
 const speedWPMElement = document.querySelector('.speed');
+const replayBtn = document.querySelector('.replay');
 // WORDS COLLECTION FOR THE TEST
 let nextWord = '';
 var words = "greet campaign coffee care revise ridge pilot full prison wrestle account dictionary start giant fast monarch patrol bear motif detective trouser title act speaker pursuit penny appear ballet agreement welcome similar sensation strong fog limited implicit nursery neighborhood infinite refund double achievement ample socialist intensify nomination visit drag retiree mislead situation credit oil clarify conscience war sow suitcase fixture worth fuss remain moment frighten spider breathe install interactive allow deadly cabin restless service rise integrity artist short circuit perception listen arrangement patience creep landscape stain citizen microphone nose bullet view category reign horizon news social reliable passion stroll constitutional adult city";
@@ -90,6 +91,12 @@ function highScoreKeeper(scoreValue){
 startBtn.addEventListener('click', function(){
     resetGame();
 });
+// Replay Button
+replayBtn.addEventListener('click',()=>{
+    resetGame();
+    modal.style.display = "none";
+});
+
 
 // Timer Functionality
 function countdown() {
@@ -106,9 +113,7 @@ function countdown() {
             timerStarted = false;
             speedWPMElement.textContent = `${wpm}`;
             modal.style.display = "block";
-            span.onclick = function() {
-                modal.style.display = "none";
-              }
+            
               
         }
     }
@@ -133,17 +138,26 @@ btn.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-
+span.onclick = function() {
+    modal.style.display = "none";
+  }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
+ 
 
-// Hmm logic ;; add event listener on space key  -- done 
-// for every correct word user types, increment score by one -- done  
-// after user press space key, load next key -- done 
-// TODO 1. Implement a timer countdown in container
-// When user beats highscore, load congratulation game after countdown ends !
-// Words per minute ! 
+// Todo for the project :
+/* 
+1. Modal close button -- done
+2. Implement Try again button in modal -- done
+3. Social share API implementation
+4. Documentation for this project.
+
+
+*/
+
+
+
