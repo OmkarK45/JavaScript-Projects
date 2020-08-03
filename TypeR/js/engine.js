@@ -161,15 +161,21 @@ window.onclick = function(event) {
 // Social Media API
 const tweet = document.querySelector('.tweet');
 const twitterButton = document.querySelector('.twitter');
+const fbPost = document.querySelector('.fb-post');
+const fbBtn = document.querySelector('.fb');
 function socialShare(s){
     console.log(s);
-
+    // Twitter API
     twitterButton.addEventListener('click',function(){
         sharingText = {
             'score' : `${s}`,
             'text' : `I scored in TypeR test ! Check out typer and test your typing speed !`
         }
         tweet.setAttribute('href', `https://twitter.com/intent/tweet?text=Check%20out%20TypeR%20!%20My%20typing%20speed%20is%20${sharingText.score}WPM.`);
+    })
+    // Facebook API
+    fbBtn.addEventListener('click',function(){
+        fbPost.setAttribute('href', `https://www.facebook.com/sharer/sharer.php?u=&quote=Check out typer ! My typing speed is ${s} WPM`);
     })
 }
 socialShare();

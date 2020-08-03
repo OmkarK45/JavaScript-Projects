@@ -28,8 +28,8 @@
                 <h4>Wanna share your score ?</h4>
                 <div class="social-buttons">
                     <li class="twitter"> <a class="tweet" target="_blank" href="">Tweet <i class="fab fa-twitter"></i></a> </li>
-                    <li class="fb"><a href=""> Facebook <i class="fab fa-facebook"></i></a></li>
-                    <li class="ig"> <a href=""> Instagram <i class="fab fa-instagram"></i></a></li>
+                    <li class="fb"><a class="fb-post" href=""> Facebook <i class="fab fa-facebook"></i></a></li>
+                    <!-- <li class="ig"> <a href=""> Instagram <i class="fab fa-instagram"></i></a></li> -->
                     <li class="replay" ><a href="" style="color:black;"><i class="far fa-rocket-launch"></i> Replay</a></li>
 
                 </div>
@@ -74,5 +74,18 @@
     </footer>
     <!-- Driver Code ! -->
     <script src="js/engine.js"></script>
+
+    <!-- Facebook SDK for Javascript Code -->
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '588822391812057',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
+      </script>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
 </html>
