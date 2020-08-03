@@ -9,7 +9,7 @@ const speedWPMElement = document.querySelector('.speed');
 const replayBtn = document.querySelector('.replay');
 // WORDS COLLECTION FOR THE TEST
 let nextWord = '';
-var words = "greet campaign coffee care revise ridge pilot full prison wrestle account dictionary start giant fast monarch patrol bear motif detective trouser title act speaker pursuit penny appear ballet agreement welcome similar sensation strong fog limited implicit nursery neighborhood infinite refund double achievement ample socialist intensify nomination visit drag retiree mislead situation credit oil clarify conscience war sow suitcase fixture worth fuss remain moment frighten spider breathe install interactive allow deadly cabin restless service rise integrity artist short circuit perception listen arrangement patience creep landscape stain citizen microphone nose bullet view category reign horizon news social reliable passion stroll constitutional adult city";
+var words = "greet campaign coffee care revise ridge pilot full prison wrestle account after start giant fast monarch patrol bear motif detective trouser title act speaker pursuit penny appear ballet welcome similar sensation strong fog limited implicit nursery  infinite refund double ample socialist intensify visit drag retiree mislead credit oil clarify  war sow suitcase fixture worth fuss remain moment frighten spider breathe install allow deadly cabin restless service rise integrity artist short circuit listen  patience creep landscape stain citizen microphone nose bullet view category reign horizon news social reliable passion stroll adult city after two miss what new other talk place thought being answer see our water city no think into book side close give in hard hand not head";
 let wordsArr = [];
 wordsArr = words.split(" ");
 
@@ -153,8 +153,8 @@ window.onclick = function(event) {
 /* 
 1. Modal close button -- done
 2. Implement Try again button in modal -- done
-3. Social share API implementation
-4. Documentation for this project.
+3. Social share API implementation -- done
+4. Documentation for this project. -- pending 
 
 
 */
