@@ -16,18 +16,26 @@
 <img src='https://img.shields.io/badge/npm required-no-red'>
 </div>
 
+<div align = 'center'>
+<h3>
+  <a href='https://elastic-johnson-192d83.netlify.app/typer/'>Visit Here</a>
+</h3>
+ 
+</div>
+
 <hr>
 
 # Features
-- __Beautiful UI/UX:__ TypR is carefully designed keeping keyboard users in mind so there's no need of using mouse.
 
-- __minimal size:__ Written in Vanilla JavaScript with minimal size.
+- **Beautiful UI/UX:** TypR is carefully designed keeping keyboard users in mind so there's no need of using mouse.
 
-- __Countdown Timer:__ Find and improve typing speed using the 1minute countdown timer.
+- **minimal size:** Written in Vanilla JavaScript with minimal size.
 
-- __Share your Score:__ Show off your score to your friends. Score sharing supported for Twitter and Facebook.
+- **Countdown Timer:** Find and improve typing speed using the 1minute countdown timer.
 
-- __Open for improvements:__ If you feel like contributing to the project, feel free to raise a PR.
+- **Share your Score:** Show off your score to your friends. Score sharing supported for Twitter and Facebook.
+
+- **Open for improvements:** If you feel like contributing to the project, feel free to raise a PR.
 <hr>
 
 # Wait, here are some Screenshots :P
@@ -39,3 +47,8 @@
     <img src='https://i.imgur.com/dZ4SsgF.png'>
 </div>
 
+<hr>
+
+# How to use ?
+
+- Simply visit https://elastic-johnson-192d83.netlify.app/typer/
