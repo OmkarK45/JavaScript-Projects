@@ -49,6 +49,25 @@
 
 <hr>
 
+# Techstack Used : 
+- HTML5, CSS3, and Plain Javascript.
+
+
 # How to use ?
 
 - Simply visit https://elastic-johnson-192d83.netlify.app/typer/
+
+- Press 'space' button to play ! Type the words in the textbox as they appear on the upperside.
+
+- When the timer runs out, you will be greeted with a modal with your score (speed) in WPM or Words Per Minute.
+
+# Want to run this on local machine ?
+
+- Just download the repository as zip and launch index.html using Live Server or similar tools.
+
+# Known Issues
+
+- Highscores are stored locally. No implementation of database yet.
+
+## License
+- [MIT](https://tldrlegal.com/license/mit-license)
