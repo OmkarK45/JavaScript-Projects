@@ -7,9 +7,13 @@ const currentScoreElement  = document.querySelector('.score');
 const highScoreElement = document.querySelector('.highScore');
 const speedWPMElement = document.querySelector('.speed');
 const replayBtn = document.querySelector('.replay');
+const tweet = document.querySelector('.tweet');
+const twitterButton = document.querySelector('.twitter');
+const fbPost = document.querySelector('.fb-post');
+const fbBtn = document.querySelector('.fb');
 // WORDS COLLECTION FOR THE TEST
 let nextWord = '';
-var words = "greet campaign coffee care revise ridge pilot full prison wrestle account after start giant fast monarch patrol bear motif detective trouser title act speaker pursuit penny appear ballet welcome similar sensation strong fog limited implicit nursery  infinite refund double ample socialist intensify visit drag retiree mislead credit oil clarify  war sow suitcase fixture worth fuss remain moment frighten spider breathe install allow deadly cabin restless service rise integrity artist short circuit listen  patience creep landscape stain citizen microphone nose bullet view category reign horizon news social reliable passion stroll adult city after two miss what new other talk place thought being answer see our water city no think into book side close give in hard hand not head";
+var words = "greet campaign coffee care revise ridge pilot full prison wrestle account after start giant fast monarch patrol bear motif detective trouser title act speaker pursuit penny appear ballet welcome similar sensation strong fog limited implicit nursery infinite refund double ample socialist intensify visit drag retiree mislead credit oil clarify  war sow suitcase fixture worth fuss remain moment frighten spider breathe install allow deadly cabin restless service rise integrity artist short circuit listen  patience creep landscape stain citizen microphone nose bullet view category reign horizon news social reliable passion stroll adult city after two miss what new other talk place thought being answer see our water city no think into book side close give in hard hand not head";
 let wordsArr = [];
 wordsArr = words.split(" ");
 
@@ -131,11 +135,11 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  console.log('modal triggered')
-}
+// // When the user clicks on the button, open the modal
+// btn.onclick = function() {
+//   modal.style.display = "block";
+//   console.log('modal triggered')
+// }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -159,10 +163,7 @@ window.onclick = function(event) {
 
 */
 // Social Media API
-const tweet = document.querySelector('.tweet');
-const twitterButton = document.querySelector('.twitter');
-const fbPost = document.querySelector('.fb-post');
-const fbBtn = document.querySelector('.fb');
+
 function socialShare(s){
     console.log(s);
     // Twitter API
