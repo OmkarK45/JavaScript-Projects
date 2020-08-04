@@ -1,4 +1,4 @@
-<h1 align="center">Typr</h1>
+<h1 align="center">TypR</h1>
 <div align='center'>
     ⌨
 </div>
@@ -15,7 +15,7 @@
 <img src='https://img.shields.io/badge/npm required-no-red'>
 </div>
 
-## Features
+# Features
 - __Beautiful UI/UX:__ TypR is carefully designed keeping keyboard users in mind so there's no need of using mouse.
 
 - __minimal size:__ Written in Vanilla JavaScript with minimal size.
@@ -25,3 +25,6 @@
 - __Share your Score:__ Show off your score to your friends. Score sharing supported for Twitter and Facebook.
 
 - __Open for improvements:__ If you feel like contributing to the project, feel free to raise a PR.
+<hr>
+
+# Wait, here's the demo :P
