@@ -721,6 +721,7 @@ li {
   font-family: "Geomanist", sans-serif;
   font-size: 2rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn-sm {

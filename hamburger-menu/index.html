@@ -205,7 +205,7 @@
         <h1 class="section-title-about">Contact Me.</h1>
         <div class="contact-container">
             <div class="form-container">
-                <form action="mailto:omkar.webdev@gmail.com?subject=Test" enctype="text/plain" method="POST">
+                <form action="mailto:omkar.webdev@gmail.com" enctype="text/plain" method="GET">
                     <label for="" class="form-label">
                         <p class="form-label-text">Full Name</p>
                         <input name="fullname" class="form-input" type="text">
@@ -216,10 +216,10 @@
                     </label>
                     <label for="" class="form-label">
                         <p class="form-label-text">Your Message</p>
-                        <textarea name="message" class="form-input text-area" type="text">
+                        <textarea name="message" id="textarea" class="form-input text-area" type="text">
                             </textarea>
                     </label>
-                    <button class="btn btn-hero form-submit" type="submit">Submit</button>
+                    <button class="btn btn-hero form-submit" onclick="sendMail(); return false" type="submit">Submit</button>
                 </form> 
             </div>
             <!--  -->

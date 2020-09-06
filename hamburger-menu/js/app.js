@@ -14,3 +14,12 @@ navLink.forEach(item=>{
         navBar.classList.remove('toggle');
     });
 });
+
+function sendMail() {
+    var link = "mailto:omkar.webdev@gmail.com"
+             + "&subject=" + encodeURIComponent("This is my subject")
+             + "&body=" + encodeURIComponent(document.getElementById('textarea').value)
+    ;
+    
+    window.location.href = link;
+}
