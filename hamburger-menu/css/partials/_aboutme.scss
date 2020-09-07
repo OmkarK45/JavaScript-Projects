@@ -13,7 +13,7 @@
 }
 .section-2 {
   .card {
-    background-color: #eee;
+    // background-color: #eee;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -37,7 +37,9 @@
     flex: 2;
     line-height: 1.7;
     .text-content-about {
-      color: #737c8a;
+      font-family: 'Quicksand',sans-serif;
+      font-weight: 500;
+      color: #000000;
       font-size: 2rem;
       p {
         padding: 3rem;
@@ -55,7 +57,8 @@
 }
 .about-heading-row {
   h1 {
-    font-family: 'Geomanist',sans-serif;
+    font-family: 'Quicksand',sans-serif;
+    font-weight: 500;
     font-size: 4rem;
     color: #545e6f;
     text-align: center;
@@ -77,7 +80,7 @@
   color: black;
   font-size: 1.3rem;
   // background-color:#151433;
-  background-color: #d6d6d6;
+  background-color: #f7f7f7;
   margin: 0.3rem auto;
   padding: 0.3rem 1.4rem;
   border-radius: 12px;
